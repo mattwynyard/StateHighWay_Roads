@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "86ac8ee2aebe935ab8182bd57ce08d27"
+build_time: [500003131, 220868000]
+inputs:
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/AppDelegate.swift": [499999986, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/MapController.swift": [500003131, 0]

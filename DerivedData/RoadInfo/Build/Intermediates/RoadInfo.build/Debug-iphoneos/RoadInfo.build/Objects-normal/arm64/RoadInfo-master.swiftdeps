@@ -1,0 +1,12 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "c3b11a3831b51f5c4bc7f4e03fc929d6"
+build_time: [500026229, 67572000]
+inputs:
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/Complex.swift": [499817964, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/VCMapView.swift": [500024452, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/AppDelegate.swift": [500020601, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/RoadEvent.swift": [500022986, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/MapController.swift": [500026229, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/XMLParser.swift": [500019457, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/NZMGConverter.swift": [500013314, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/Annotation.swift": [500024840, 0]

@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C914B1211BEB388C0040FAAA /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914B1201BEB388C0040FAAA /* Annotation.swift */; };
+		C914B1231BEB39CA0040FAAA /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914B1221BEB39CA0040FAAA /* VCMapView.swift */; };
 		C96666E31BEADFF200A71C2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666E21BEADFF200A71C2F /* AppDelegate.swift */; };
-		C96666E51BEADFF200A71C2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666E41BEADFF200A71C2F /* ViewController.swift */; };
+		C96666E51BEADFF200A71C2F /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666E41BEADFF200A71C2F /* MapController.swift */; };
 		C96666E81BEADFF200A71C2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96666E61BEADFF200A71C2F /* Main.storyboard */; };
 		C96666EA1BEADFF200A71C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96666E91BEADFF200A71C2F /* Assets.xcassets */; };
 		C96666ED1BEADFF200A71C2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96666EB1BEADFF200A71C2F /* LaunchScreen.storyboard */; };
 		C96666F81BEADFF200A71C2F /* RoadInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666F71BEADFF200A71C2F /* RoadInfoTests.swift */; };
 		C96667031BEADFF200A71C2F /* RoadInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96667021BEADFF200A71C2F /* RoadInfoUITests.swift */; };
+		C97958CE1BEAEDB800C1667D /* Complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958CD1BEAEDB800C1667D /* Complex.swift */; };
+		C97958D21BEAEDC700C1667D /* NZMGConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958D11BEAEDC700C1667D /* NZMGConverter.swift */; };
+		C97958D51BEAEDD000C1667D /* RoadEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958D31BEAEDD000C1667D /* RoadEvent.swift */; };
+		C97958D61BEAEDD000C1667D /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958D41BEAEDD000C1667D /* XMLParser.swift */; };
+		C97958D81BEAF29600C1667D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C97958D71BEAF29600C1667D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C914B1201BEB388C0040FAAA /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		C914B1221BEB39CA0040FAAA /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		C96666DF1BEADFF200A71C2F /* RoadInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96666E21BEADFF200A71C2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C96666E41BEADFF200A71C2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C96666E41BEADFF200A71C2F /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		C96666E71BEADFF200A71C2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C96666E91BEADFF200A71C2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96666EC1BEADFF200A71C2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +56,11 @@
 		C96666FE1BEADFF200A71C2F /* RoadInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96667021BEADFF200A71C2F /* RoadInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadInfoUITests.swift; sourceTree = "<group>"; };
 		C96667041BEADFF200A71C2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97958CD1BEAEDB800C1667D /* Complex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Complex.swift; sourceTree = "<group>"; };
+		C97958D11BEAEDC700C1667D /* NZMGConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZMGConverter.swift; sourceTree = "<group>"; };
+		C97958D31BEAEDD000C1667D /* RoadEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadEvent.swift; sourceTree = "<group>"; };
+		C97958D41BEAEDD000C1667D /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		C97958D71BEAF29600C1667D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 		C96666D61BEADFF200A71C2F = {
 			isa = PBXGroup;
 			children = (
+				C97958D71BEAF29600C1667D /* Default-568h@2x.png */,
 				C96666E11BEADFF200A71C2F /* RoadInfo */,
 				C96666F61BEADFF200A71C2F /* RoadInfoTests */,
 				C96667011BEADFF200A71C2F /* RoadInfoUITests */,
@@ -98,7 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				C96666E21BEADFF200A71C2F /* AppDelegate.swift */,
-				C96666E41BEADFF200A71C2F /* ViewController.swift */,
+				C97958D31BEAEDD000C1667D /* RoadEvent.swift */,
+				C97958D41BEAEDD000C1667D /* XMLParser.swift */,
+				C97958D11BEAEDC700C1667D /* NZMGConverter.swift */,
+				C97958CD1BEAEDB800C1667D /* Complex.swift */,
+				C96666E41BEADFF200A71C2F /* MapController.swift */,
+				C914B1201BEB388C0040FAAA /* Annotation.swift */,
+				C914B1221BEB39CA0040FAAA /* VCMapView.swift */,
 				C96666E61BEADFF200A71C2F /* Main.storyboard */,
 				C96666E91BEADFF200A71C2F /* Assets.xcassets */,
 				C96666EB1BEADFF200A71C2F /* LaunchScreen.storyboard */,
@@ -230,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C96666ED1BEADFF200A71C2F /* LaunchScreen.storyboard in Resources */,
+				C97958D81BEAF29600C1667D /* Default-568h@2x.png in Resources */,
 				C96666EA1BEADFF200A71C2F /* Assets.xcassets in Resources */,
 				C96666E81BEADFF200A71C2F /* Main.storyboard in Resources */,
 			);
@@ -256,7 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96666E51BEADFF200A71C2F /* ViewController.swift in Sources */,
+				C97958D61BEAEDD000C1667D /* XMLParser.swift in Sources */,
+				C96666E51BEADFF200A71C2F /* MapController.swift in Sources */,
+				C97958CE1BEAEDB800C1667D /* Complex.swift in Sources */,
+				C97958D21BEAEDC700C1667D /* NZMGConverter.swift in Sources */,
+				C914B1231BEB39CA0040FAAA /* VCMapView.swift in Sources */,
+				C97958D51BEAEDD000C1667D /* RoadEvent.swift in Sources */,
+				C914B1211BEB388C0040FAAA /* Annotation.swift in Sources */,
 				C96666E31BEADFF200A71C2F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +512,7 @@
 				C96667091BEADFF200A71C2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C966670A1BEADFF200A71C2F /* Build configuration list for PBXNativeTarget "RoadInfoTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +521,7 @@
 				C966670C1BEADFF200A71C2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C966670D1BEADFF200A71C2F /* Build configuration list for PBXNativeTarget "RoadInfoUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +530,7 @@
 				C966670F1BEADFF200A71C2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
