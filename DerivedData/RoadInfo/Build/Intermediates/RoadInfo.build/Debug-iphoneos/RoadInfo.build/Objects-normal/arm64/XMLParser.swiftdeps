@@ -6,34 +6,34 @@ provides-nominal:
 provides-member:
 - ["C8RoadInfo9XMLParser", ""]
 provides-dynamic-lookup:
-- "currentElement"
-- "_data"
-- "parserDidStartDocument"
-- "parserDidEndDocument"
 - "count"
 - "parser"
 - "parser"
 - "parser"
+- "parserDidStartDocument"
+- "parserDidEndDocument"
 - "formatDate"
+- "_data"
+- "currentElement"
 depends-top-level:
-- "XMLParser"
-- !private "++"
-- "NSData"
-- !private "print"
-- "Int"
-- !private "BooleanLiteralType"
-- !private "*"
 - !private "NSDateFormatter"
 - !private "NSTimeZone"
-- !private "=="
+- "XMLParser"
+- !private "++"
 - !private "~="
+- !private "=="
+- "Int"
+- "NSObject"
+- "NSData"
+- "NSXMLParserDelegate"
+- "NSDate"
+- !private "StringLiteralType"
+- "String"
+- !private "*"
 - "NSXMLParser"
 - "RoadEvent"
-- "NSXMLParserDelegate"
-- !private "StringLiteralType"
-- "NSObject"
-- "String"
-- "NSDate"
+- !private "BooleanLiteralType"
+- !private "print"
 depends-member:
 - !private ["PSs9AnyObject", "Int"]
 - !private ["PSs9AnyObject", "NSDateFormatter"]
@@ -403,6 +403,7 @@ depends-member:
 - ["PSo19NSXMLParserDelegate", "parserDidStartDocument"]
 - !private ["PSo19NSXMLParserDelegate", "print"]
 - ["PSo19NSXMLParserDelegate", ""]
+- !private ["Sq", "deinit"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["PSs21RandomAccessIndexType", "init"]
@@ -588,6 +589,7 @@ depends-nominal:
 - !private "CSo10NSTimeZone"
 - !private "CSo11NSXMLParser"
 - "PSo19NSXMLParserDelegate"
+- !private "Sq"
 - !private "PSs21RandomAccessIndexType"
 - !private "VSs5Range"
 - "PSs30RangeReplaceableCollectionType"

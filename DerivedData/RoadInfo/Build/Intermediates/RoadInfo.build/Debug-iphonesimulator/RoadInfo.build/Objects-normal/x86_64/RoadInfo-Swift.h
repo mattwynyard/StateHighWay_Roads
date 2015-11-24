@@ -86,16 +86,28 @@ typedef int swift_int2  __attribute__((__ext_vector_type__(2)));
 typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
-@import UIKit;
-@import CoreLocation;
+@import ObjectiveC;
 @import MapKit;
+@import CoreLocation;
+@import UIKit;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class UIImage;
+
+SWIFT_CLASS("_TtC8RoadInfo10Annotation")
+@interface Annotation : NSObject <MKAnnotation>
+@property (nonatomic, readonly, copy) NSString * __nullable title;
+@property (nonatomic, readonly, copy) NSString * __nullable subtitle;
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, strong) UIImage * __null_unspecified image;
+- (nonnull instancetype)initWithTitle:(NSString * __nonnull)title subtitle:(NSString * __nonnull)subtitle coordinate:(CLLocationCoordinate2D)coordinate OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIWindow;
 @class UIApplication;
-@class NSObject;
 
 SWIFT_CLASS("_TtC8RoadInfo11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -109,9 +121,40 @@ SWIFT_CLASS("_TtC8RoadInfo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSXMLParser;
+@class NSData;
+@class NSError;
+@class NSDate;
+
+SWIFT_CLASS("_TtC8RoadInfo15ChristchurchXML")
+@interface ChristchurchXML : NSObject <NSXMLParserDelegate>
+@property (nonatomic, readonly, strong) NSXMLParser * __null_unspecified parser;
+@property (nonatomic, readonly, strong) NSData * __null_unspecified _data;
+@property (nonatomic) NSInteger count;
+@property (nonatomic) NSInteger locationCount;
+@property (nonatomic, copy) NSString * __null_unspecified currentElement;
+@property (nonatomic) BOOL jobLevels;
+@property (nonatomic) BOOL trafficImpacts;
+@property (nonatomic) BOOL locations;
+- (nonnull instancetype)initWithData:(NSData * __nonnull)data OBJC_DESIGNATED_INITIALIZER;
+- (void)parserDidStartDocument:(NSXMLParser * __nonnull)parser;
+- (void)parserDidEndDocument:(NSXMLParser * __nonnull)parser;
+- (void)parser:(NSXMLParser * __nonnull)parser didStartElement:(NSString * __nonnull)elementName namespaceURI:(NSString * __nullable)namespaceURI qualifiedName:(NSString * __nullable)qName attributes:(NSDictionary<NSString *, NSString *> * __nonnull)attributeDict;
+- (void)parser:(NSXMLParser * __nonnull)parser foundCharacters:(NSString * __nonnull)string;
+- (void)parser:(NSXMLParser * __nonnull)parser validationErrorOccurred:(NSError * __nonnull)validationError;
+- (void)parser:(NSXMLParser * __nonnull)parser parseErrorOccurred:(NSError * __nonnull)parseError;
+- (NSDate * __nonnull)formatDate:(NSString * __nonnull)date;
+@end
+
 @class CLLocationManager;
-@class CLLocation;
+@class XMLParser;
+@class MKPolyline;
+@class NSURL;
 @class MKMapView;
+@protocol MKOverlay;
+@class MKOverlayRenderer;
+@class CLLocation;
+@class MKAnnotationView;
 @class NSBundle;
 @class NSCoder;
 
@@ -119,11 +162,37 @@ SWIFT_CLASS("_TtC8RoadInfo13MapController")
 @interface MapController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (nonatomic, weak) IBOutlet MKMapView * __null_unspecified mapView;
 @property (nonatomic, readonly, strong) CLLocationManager * __nonnull locationManager;
+@property (nonatomic, readonly, strong) AppDelegate * __nonnull appDelegate;
+@property (nonatomic, strong) XMLParser * __nullable xmlParser;
+@property (nonatomic, strong) ChristchurchXML * __nullable chchParser;
+@property (nonatomic, copy) NSArray<Annotation *> * __nonnull annotations;
+@property (nonatomic, copy) NSArray<MKPolyline *> * __nonnull polylines;
+@property (nonatomic) BOOL running;
+@property (nonatomic, readonly, strong) NSURL * __nonnull request;
 - (void)viewDidLoad;
+- (void)annotationImage:(Annotation * __nonnull)annotation event:(NSString * __nonnull)event;
+- (MKOverlayRenderer * __nonnull)mapView:(MKMapView * __nonnull)mapView rendererForOverlay:(id <MKOverlay> __nonnull)overlay;
 - (void)didReceiveMemoryWarning;
 - (void)locationManager:(CLLocationManager * __nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * __nonnull)locations;
+- (MKAnnotationView * __nullable)mapView:(MKMapView * __nonnull)mapView viewForAnnotation:(id <MKAnnotation> __nonnull)annotation;
+- (void)httpGet:(NSURL * __null_unspecified)request callback:(void (^ __nonnull)(NSData * __nonnull, NSString * __nonnull, NSString * __nullable))callback;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8RoadInfo9XMLParser")
+@interface XMLParser : NSObject <NSXMLParserDelegate>
+@property (nonatomic, readonly, strong) NSXMLParser * __null_unspecified parser;
+@property (nonatomic, readonly, strong) NSData * __null_unspecified _data;
+@property (nonatomic) NSInteger count;
+@property (nonatomic, copy) NSString * __null_unspecified currentElement;
+- (nonnull instancetype)initWithData:(NSData * __nonnull)data OBJC_DESIGNATED_INITIALIZER;
+- (void)parserDidStartDocument:(NSXMLParser * __nonnull)parser;
+- (void)parserDidEndDocument:(NSXMLParser * __nonnull)parser;
+- (void)parser:(NSXMLParser * __nonnull)parser didStartElement:(NSString * __nonnull)elementName namespaceURI:(NSString * __nullable)namespaceURI qualifiedName:(NSString * __nullable)qName attributes:(NSDictionary<NSString *, NSString *> * __nonnull)attributeDict;
+- (void)parser:(NSXMLParser * __nonnull)parser foundCharacters:(NSString * __nonnull)string;
+- (NSDate * __nonnull)formatDate:(NSString * __nonnull)date;
 @end
 
 #pragma clang diagnostic pop

@@ -4,11 +4,15 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		QpEL85KRh1Vlt4/AJ6a4nIf9FZA=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R5IOoP1Jq8qJSgIdyiBNbItLb5I=
+			/UUltQI5JzaYzBalgMR/9BSNO74=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +30,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3wdvfxdtntuzG0Rr4Oyv0EX5pyA=
+			SON34Z+WsXKd+XSs9RwLHk6wink=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -35,7 +39,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2vzNES6Uf3HoeRnur45xWSOZzoY=
+			r5Ho7qCYF2+BM+4wA2/9XcxuYBA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/EventViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			x92hOOJgtM+xbq+Y2RZ0tshY55M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -44,24 +57,47 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IVfwFjpywzQPuP6XCe7BPTdAxug=
+			oVj+kcDz9ZvGIZ6CxRHb7SCfmLo=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/UINavigationController-J9C-sB-Ixh.nib</key>
+		<key>Base.lproj/Main.storyboardc/UINavigationController-CVf-f4-6Gr.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mfEu46YgTt/UCsoJwxHAKUkmk90=
+			znb7TExHrWODk7BQJy3XQHDrip0=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Default-568h@2x.png</key>
-		<data>
-		D8STS3mHDv2ya6HKCvP6jrq8eig=
-		</data>
+		<key>Base.lproj/Main.storyboardc/UITableViewController-qRh-CG-pB0.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cfjIeV5HFzCkQnLgXLESEI98+kU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/bKW-SN-1yK-view-mbV-3E-Cbp.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SIZwC3mMYxt4qgkcxSyTogZMWc8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/qRh-CG-pB0-view-ZtW-sy-IFC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TcEKdCwVH4ez84Xkf018sqhz0uc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
 		5Z711RmsbM8CXzEdRmVtFojLCYQ=
@@ -104,24 +140,44 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		oz1x5EcDKS5NTgX7AJ098uQJ1V4=
+		q+uOhjMC90SHNRNY+VAmUEMjcnE=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>black-warning-sign16px.png</key>
+		<data>
+		Vthmz67uV3Y9ine5dTT3n5HYxaY=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		n2Ayno+O67DYcQTBLeBbR5jQPg0=
+		IcKVJzTlVIncEkqKi+2yTeTbm4g=
+		</data>
+		<key>orange-warning-sign16px.png</key>
+		<data>
+		O7Cld23t6jC42qDw98Aelikg3GQ=
+		</data>
+		<key>red-warning-sign16px.png</key>
+		<data>
+		5MOFtHdti3WEEsep5+8mM69O3Ys=
+		</data>
+		<key>yellow-warning-sign16px.png</key>
+		<data>
+		gTcCUCkwDa/C7srfLR6ryckHmVE=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		QpEL85KRh1Vlt4/AJ6a4nIf9FZA=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R5IOoP1Jq8qJSgIdyiBNbItLb5I=
+			/UUltQI5JzaYzBalgMR/9BSNO74=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -139,7 +195,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3wdvfxdtntuzG0Rr4Oyv0EX5pyA=
+			SON34Z+WsXKd+XSs9RwLHk6wink=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -148,7 +204,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2vzNES6Uf3HoeRnur45xWSOZzoY=
+			r5Ho7qCYF2+BM+4wA2/9XcxuYBA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/EventViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			x92hOOJgtM+xbq+Y2RZ0tshY55M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -157,24 +222,47 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IVfwFjpywzQPuP6XCe7BPTdAxug=
+			oVj+kcDz9ZvGIZ6CxRHb7SCfmLo=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/UINavigationController-J9C-sB-Ixh.nib</key>
+		<key>Base.lproj/Main.storyboardc/UINavigationController-CVf-f4-6Gr.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mfEu46YgTt/UCsoJwxHAKUkmk90=
+			znb7TExHrWODk7BQJy3XQHDrip0=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Default-568h@2x.png</key>
-		<data>
-		D8STS3mHDv2ya6HKCvP6jrq8eig=
-		</data>
+		<key>Base.lproj/Main.storyboardc/UITableViewController-qRh-CG-pB0.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cfjIeV5HFzCkQnLgXLESEI98+kU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/bKW-SN-1yK-view-mbV-3E-Cbp.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SIZwC3mMYxt4qgkcxSyTogZMWc8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/qRh-CG-pB0-view-ZtW-sy-IFC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TcEKdCwVH4ez84Xkf018sqhz0uc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
 		5Z711RmsbM8CXzEdRmVtFojLCYQ=
@@ -215,9 +303,25 @@
 		<data>
 		VKvvIRs88QgDDZntra6jthBlFFQ=
 		</data>
+		<key>black-warning-sign16px.png</key>
+		<data>
+		Vthmz67uV3Y9ine5dTT3n5HYxaY=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		n2Ayno+O67DYcQTBLeBbR5jQPg0=
+		IcKVJzTlVIncEkqKi+2yTeTbm4g=
+		</data>
+		<key>orange-warning-sign16px.png</key>
+		<data>
+		O7Cld23t6jC42qDw98Aelikg3GQ=
+		</data>
+		<key>red-warning-sign16px.png</key>
+		<data>
+		5MOFtHdti3WEEsep5+8mM69O3Ys=
+		</data>
+		<key>yellow-warning-sign16px.png</key>
+		<data>
+		gTcCUCkwDa/C7srfLR6ryckHmVE=
 		</data>
 	</dict>
 	<key>rules</key>

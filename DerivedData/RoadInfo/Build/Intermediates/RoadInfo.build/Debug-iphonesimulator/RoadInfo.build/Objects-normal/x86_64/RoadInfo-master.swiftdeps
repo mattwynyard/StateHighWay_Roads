@@ -1,6 +1,14 @@
 version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
 options: "86ac8ee2aebe935ab8182bd57ce08d27"
-build_time: [500003131, 220868000]
+build_time: [500457375, 154194000]
 inputs:
-  "/Users/Matt/iOS/RoadInfo/RoadInfo/AppDelegate.swift": [499999986, 0]
-  "/Users/Matt/iOS/RoadInfo/RoadInfo/MapController.swift": [500003131, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/ChristchurchEvent.swift": [500371850, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/Location.swift": [500371850, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/Annotation.swift": [500098806, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/Complex.swift": [499817964, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/ChristchurchXML.swift": [500457375, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/MapController.swift": [500457313, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/NZMGConverter.swift": [500013314, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/AppDelegate.swift": [500028732, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/RoadEvent.swift": [500071110, 0]
+  "/Users/Matt/iOS/RoadInfo/RoadInfo/XMLParser.swift": [500095347, 0]

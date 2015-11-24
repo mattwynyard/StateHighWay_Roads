@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90BC3691BEC52A1008E71D9 /* yellow-warning-sign16px.png in Resources */ = {isa = PBXBuildFile; fileRef = C90BC3681BEC52A1008E71D9 /* yellow-warning-sign16px.png */; };
+		C90BC36B1BEC55C2008E71D9 /* red-warning-sign16px.png in Resources */ = {isa = PBXBuildFile; fileRef = C90BC36A1BEC55C2008E71D9 /* red-warning-sign16px.png */; };
+		C90BC36D1BF073F3008E71D9 /* ChristchurchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BC36C1BF073F3008E71D9 /* ChristchurchEvent.swift */; };
+		C90BC36F1BF07474008E71D9 /* ChristchurchXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BC36E1BF07474008E71D9 /* ChristchurchXML.swift */; };
+		C90BC3711BF08732008E71D9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BC3701BF08732008E71D9 /* Location.swift */; };
 		C914B1211BEB388C0040FAAA /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914B1201BEB388C0040FAAA /* Annotation.swift */; };
-		C914B1231BEB39CA0040FAAA /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914B1221BEB39CA0040FAAA /* VCMapView.swift */; };
 		C96666E31BEADFF200A71C2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666E21BEADFF200A71C2F /* AppDelegate.swift */; };
 		C96666E51BEADFF200A71C2F /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666E41BEADFF200A71C2F /* MapController.swift */; };
 		C96666E81BEADFF200A71C2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96666E61BEADFF200A71C2F /* Main.storyboard */; };
@@ -20,7 +24,9 @@
 		C97958D21BEAEDC700C1667D /* NZMGConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958D11BEAEDC700C1667D /* NZMGConverter.swift */; };
 		C97958D51BEAEDD000C1667D /* RoadEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958D31BEAEDD000C1667D /* RoadEvent.swift */; };
 		C97958D61BEAEDD000C1667D /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958D41BEAEDD000C1667D /* XMLParser.swift */; };
-		C97958D81BEAF29600C1667D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C97958D71BEAF29600C1667D /* Default-568h@2x.png */; };
+		C9BDF26A1BFFF90000A0C886 /* black-warning-sign16px.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BDF2681BFFF90000A0C886 /* black-warning-sign16px.png */; };
+		C9BDF26B1BFFF90000A0C886 /* orange-warning-sign16px.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BDF2691BFFF90000A0C886 /* orange-warning-sign16px.png */; };
+		C9BDF26F1C0005A100A0C886 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BDF26E1C0005A100A0C886 /* EventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C90BC3681BEC52A1008E71D9 /* yellow-warning-sign16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yellow-warning-sign16px.png"; path = "Images/yellow-warning-sign16px.png"; sourceTree = "<group>"; };
+		C90BC36A1BEC55C2008E71D9 /* red-warning-sign16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "red-warning-sign16px.png"; path = "Images/red-warning-sign16px.png"; sourceTree = "<group>"; };
+		C90BC36C1BF073F3008E71D9 /* ChristchurchEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChristchurchEvent.swift; sourceTree = "<group>"; };
+		C90BC36E1BF07474008E71D9 /* ChristchurchXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChristchurchXML.swift; sourceTree = "<group>"; };
+		C90BC3701BF08732008E71D9 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C914B1201BEB388C0040FAAA /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
-		C914B1221BEB39CA0040FAAA /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		C96666DF1BEADFF200A71C2F /* RoadInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96666E21BEADFF200A71C2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96666E41BEADFF200A71C2F /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -60,7 +70,9 @@
 		C97958D11BEAEDC700C1667D /* NZMGConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZMGConverter.swift; sourceTree = "<group>"; };
 		C97958D31BEAEDD000C1667D /* RoadEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadEvent.swift; sourceTree = "<group>"; };
 		C97958D41BEAEDD000C1667D /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
-		C97958D71BEAF29600C1667D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C9BDF2681BFFF90000A0C886 /* black-warning-sign16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "black-warning-sign16px.png"; path = "Images/black-warning-sign16px.png"; sourceTree = "<group>"; };
+		C9BDF2691BFFF90000A0C886 /* orange-warning-sign16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "orange-warning-sign16px.png"; path = "Images/orange-warning-sign16px.png"; sourceTree = "<group>"; };
+		C9BDF26E1C0005A100A0C886 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +103,10 @@
 		C96666D61BEADFF200A71C2F = {
 			isa = PBXGroup;
 			children = (
-				C97958D71BEAF29600C1667D /* Default-568h@2x.png */,
+				C9BDF2681BFFF90000A0C886 /* black-warning-sign16px.png */,
+				C9BDF2691BFFF90000A0C886 /* orange-warning-sign16px.png */,
+				C90BC36A1BEC55C2008E71D9 /* red-warning-sign16px.png */,
+				C90BC3681BEC52A1008E71D9 /* yellow-warning-sign16px.png */,
 				C96666E11BEADFF200A71C2F /* RoadInfo */,
 				C96666F61BEADFF200A71C2F /* RoadInfoTests */,
 				C96667011BEADFF200A71C2F /* RoadInfoUITests */,
@@ -113,13 +128,14 @@
 			isa = PBXGroup;
 			children = (
 				C96666E21BEADFF200A71C2F /* AppDelegate.swift */,
+				C98B9E451C01AB4900C1F894 /* GridConversion */,
+				C98B9E461C01AB6400C1F894 /* XMLParsers */,
+				C90BC36C1BF073F3008E71D9 /* ChristchurchEvent.swift */,
 				C97958D31BEAEDD000C1667D /* RoadEvent.swift */,
-				C97958D41BEAEDD000C1667D /* XMLParser.swift */,
-				C97958D11BEAEDC700C1667D /* NZMGConverter.swift */,
-				C97958CD1BEAEDB800C1667D /* Complex.swift */,
+				C90BC3701BF08732008E71D9 /* Location.swift */,
 				C96666E41BEADFF200A71C2F /* MapController.swift */,
+				C9BDF26E1C0005A100A0C886 /* EventViewController.swift */,
 				C914B1201BEB388C0040FAAA /* Annotation.swift */,
-				C914B1221BEB39CA0040FAAA /* VCMapView.swift */,
 				C96666E61BEADFF200A71C2F /* Main.storyboard */,
 				C96666E91BEADFF200A71C2F /* Assets.xcassets */,
 				C96666EB1BEADFF200A71C2F /* LaunchScreen.storyboard */,
@@ -144,6 +160,24 @@
 				C96667041BEADFF200A71C2F /* Info.plist */,
 			);
 			path = RoadInfoUITests;
+			sourceTree = "<group>";
+		};
+		C98B9E451C01AB4900C1F894 /* GridConversion */ = {
+			isa = PBXGroup;
+			children = (
+				C97958D11BEAEDC700C1667D /* NZMGConverter.swift */,
+				C97958CD1BEAEDB800C1667D /* Complex.swift */,
+			);
+			name = GridConversion;
+			sourceTree = "<group>";
+		};
+		C98B9E461C01AB6400C1F894 /* XMLParsers */ = {
+			isa = PBXGroup;
+			children = (
+				C97958D41BEAEDD000C1667D /* XMLParser.swift */,
+				C90BC36E1BF07474008E71D9 /* ChristchurchXML.swift */,
+			);
+			name = XMLParsers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +248,7 @@
 				TargetAttributes = {
 					C96666DE1BEADFF200A71C2F = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 8WV73T2R43;
 					};
 					C96666F21BEADFF200A71C2F = {
 						CreatedOnToolsVersion = 7.1;
@@ -251,9 +286,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C96666ED1BEADFF200A71C2F /* LaunchScreen.storyboard in Resources */,
-				C97958D81BEAF29600C1667D /* Default-568h@2x.png in Resources */,
 				C96666EA1BEADFF200A71C2F /* Assets.xcassets in Resources */,
+				C9BDF26B1BFFF90000A0C886 /* orange-warning-sign16px.png in Resources */,
+				C90BC36B1BEC55C2008E71D9 /* red-warning-sign16px.png in Resources */,
+				C9BDF26A1BFFF90000A0C886 /* black-warning-sign16px.png in Resources */,
 				C96666E81BEADFF200A71C2F /* Main.storyboard in Resources */,
+				C90BC3691BEC52A1008E71D9 /* yellow-warning-sign16px.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C90BC36D1BF073F3008E71D9 /* ChristchurchEvent.swift in Sources */,
+				C9BDF26F1C0005A100A0C886 /* EventViewController.swift in Sources */,
 				C97958D61BEAEDD000C1667D /* XMLParser.swift in Sources */,
 				C96666E51BEADFF200A71C2F /* MapController.swift in Sources */,
 				C97958CE1BEAEDB800C1667D /* Complex.swift in Sources */,
 				C97958D21BEAEDC700C1667D /* NZMGConverter.swift in Sources */,
-				C914B1231BEB39CA0040FAAA /* VCMapView.swift in Sources */,
+				C90BC3711BF08732008E71D9 /* Location.swift in Sources */,
+				C90BC36F1BF07474008E71D9 /* ChristchurchXML.swift in Sources */,
 				C97958D51BEAEDD000C1667D /* RoadEvent.swift in Sources */,
 				C914B1211BEB388C0040FAAA /* Annotation.swift in Sources */,
 				C96666E31BEADFF200A71C2F /* AppDelegate.swift in Sources */,
@@ -427,10 +468,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RoadInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.niobium.RoadInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -438,10 +482,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RoadInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.niobium.RoadInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

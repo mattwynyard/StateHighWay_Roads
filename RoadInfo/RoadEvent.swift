@@ -13,41 +13,44 @@ typealias Coordinates = [[Coordinate]]
 
 class RoadEvent: CustomStringConvertible {
     
-    var alternativeRoute: String! = nil
-    var directLineDistance: NSMutableArray! = []
-    var endDate: NSDate! = nil
-    var eventComments: String! = nil
-    var eventDescription: String! = nil
-    var eventId: Int! = nil
-    var eventIsland: String! = nil
-    var eventType: String! = nil
-    var expectedResolution: String! = nil
-    var impact: String! = nil
-    var locationArea: String! = nil
-    var location: NSMutableArray! = []
-    var planned: Bool! = nil
-    var restrictions: String! = nil
-    var startDate: NSDate! = nil
-    var status: String! = nil
-    var srid: String! = nil
+    var alternativeRoute: String? = nil
+    var directLineDistance: NSMutableArray? = []
+    var endDate: NSDate? = nil
+    var eventComments: String? = nil
+    var eventDescription: String? = nil
+    var eventId: Int? = nil
+    var eventIsland: String? = nil
+    var eventType: String? = nil
+    var expectedResolution: String? = nil
+    var impact: String? = nil
+    var locationArea: String? = nil
+    var location: NSMutableArray? = []
+    var planned: Bool? = nil
+    var restrictions: String? = nil
+    var startDate: NSDate? = nil
+    var status: String? = nil
+    var srid: String? = nil
     var coordinate: Coordinate! = nil
     var coordinatesWSG84 = Array<Array<Coordinate>>()
     var array = Array<Array<Coordinate>>() //Array of array of tuples(Double) NZMG
     var wktGeometry: String! = nil
     var wktGeometryType: String! = nil
-    var eventCreated: NSDate! = nil
-    var eventModified: NSDate! = nil
-    var informationSource: String! = nil
-    var supplier: String! = nil
-    var eventRegions: NSMutableArray! = nil
+    var eventCreated: NSDate? = nil
+    var eventModified: NSDate? = nil
+    var informationSource: String? = nil
+    var supplier: String? = nil
+    var eventRegions: NSMutableArray? = nil
     
+    /**
+     Computed property to get string description of the RoadEvent class
+     */
     var description: String {
         get {
             return "event id: \(eventId)\u{000A}" +
             "alernative route: \(alternativeRoute)\u{000A}" +
             "direct line distance: \(directLineDistance)\u{000A}" +
-            "start date: \(getDate(startDate)) \u{000A}" +
-            "end date: \(getDate(endDate)) \u{000A}" +
+            "start date: \(getDate(startDate!)) \u{000A}" +
+            "end date: \(getDate(endDate!)) \u{000A}" +
             "event comments: \(eventComments)\u{000A}" +
             "event description: \(eventDescription)\u{000A}" +
             "event island: \(eventIsland)\u{000A}" +
@@ -61,8 +64,8 @@ class RoadEvent: CustomStringConvertible {
             "status: \(status)\u{000A}" +
             "wktGeometry: \(wktGeometry)\u{000A}" +
             "wktGeometryType: \(wktGeometryType)\u{000A}" +
-            "eventCreated: \(getDate(eventCreated))\u{000A}" +
-            "eventModified: \(getDate(eventModified))\u{000A}" +
+            "eventCreated: \(getDate(eventCreated!))\u{000A}" +
+            "eventModified: \(getDate(eventModified!))\u{000A}" +
             "informationSource: \(informationSource)\u{000A}" +
             "supplier: \(supplier)\u{000A}" +
             "eventRegions: \(eventRegions)\u{000A}"
@@ -70,6 +73,17 @@ class RoadEvent: CustomStringConvertible {
         }
     }
     
+    func getEventDetails() -> [String] {
+        
+        let eventDetails: [String] = [eventDescription!, impact!, locationArea!, eventComments!, expectedResolution!]
+            return eventDetails
+            
+        }
+    
+    /**
+     Converts coordinates in NZMG array into WSG84 lat/long coordinates and
+     adds them to a seperate array
+     */
     func transform() {
         //print(array)
         let converter = NZMGConverter()
@@ -89,6 +103,10 @@ class RoadEvent: CustomStringConvertible {
         //print(coordinatesWSG84)
     }
     
+    /**
+     Parses the wtkGeometry string and extracts NZMG coordinates into a new 2D-array
+     of tuples (coordinate). A 2-D array is needed to handle line coordinates.
+     */
     func setCoordinates() {
         //print(wktGeometry)
         let sridTemp = getSubstringToIndex(wktGeometry, character: ";")
@@ -111,7 +129,6 @@ class RoadEvent: CustomStringConvertible {
             tupleArray.append(coordinate)
             array.append(tupleArray)
         } else {
-            //var array = Array<Array<Coordinate>>() //Array of array of tuples(Double)
             var tupleArray = [Coordinate]() //Array of tuples(Double)
             var tuple: (Double, Double) = (0, 0)
             var easting: Bool = false
@@ -164,7 +181,11 @@ class RoadEvent: CustomStringConvertible {
             //print(array)
         }
     }
-    
+    /**
+     Converts date from GMT to NZDT
+     - Parameter date: The date to format.
+     - Returns: a string containing the formatted date
+     */
     private func getDate(date: NSDate) -> String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "dd-MM-yyyy hh:mm a"

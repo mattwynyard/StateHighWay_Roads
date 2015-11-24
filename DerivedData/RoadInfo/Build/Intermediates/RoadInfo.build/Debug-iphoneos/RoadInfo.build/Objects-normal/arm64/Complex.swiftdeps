@@ -18,23 +18,23 @@ provides-member:
 - ["C8RoadInfo7Complex", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "IntegerLiteralType"
-- "*"
-- !private "=="
-- !private "UnicodeScalarType"
-- "+"
-- !private "StringLiteralType"
-- "String"
-- "/"
-- !private "<"
 - "CustomStringConvertible"
 - "+="
-- "^"
-- "Double"
+- "String"
+- "+"
 - "Complex"
-- "-"
 - !private "FloatLiteralType"
+- !private "<"
 - "Int"
+- !private "=="
+- "-"
+- !private "IntegerLiteralType"
+- "Double"
+- "*"
+- "^"
+- "/"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["PSs9AnyObject", "Complex"]

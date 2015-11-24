@@ -1,0 +1,89 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ChristchurchEvent"
+provides-nominal:
+- "C8RoadInfo17ChristchurchEvent"
+provides-member:
+- ["C8RoadInfo17ChristchurchEvent", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "NSMutableArray"
+- "Array"
+- "NSDate"
+- "ChristchurchEvent"
+- "CustomStringConvertible"
+- "String"
+- !private "StringLiteralType"
+depends-member:
+- ["PSs9AnyObject", "Element"]
+- ["PSs9AnyObject", "description"]
+- ["PSs9AnyObject", ""]
+- ["PSs23ArrayLiteralConvertible", "Element"]
+- ["PSs11CVarArgType", "Element"]
+- ["C8RoadInfo17ChristchurchEvent", "NSDate"]
+- ["C8RoadInfo17ChristchurchEvent", "NSMutableArray"]
+- ["C8RoadInfo17ChristchurchEvent", "String"]
+- ["C8RoadInfo17ChristchurchEvent", "address"]
+- ["C8RoadInfo17ChristchurchEvent", "deinit"]
+- ["C8RoadInfo17ChristchurchEvent", "description"]
+- ["C8RoadInfo17ChristchurchEvent", "endDate"]
+- ["C8RoadInfo17ChristchurchEvent", "id"]
+- ["C8RoadInfo17ChristchurchEvent", "init"]
+- ["C8RoadInfo17ChristchurchEvent", "jobLevels"]
+- ["C8RoadInfo17ChristchurchEvent", "jobType"]
+- ["C8RoadInfo17ChristchurchEvent", "lastUpdated"]
+- ["C8RoadInfo17ChristchurchEvent", "locations"]
+- ["C8RoadInfo17ChristchurchEvent", "publicDescription"]
+- ["C8RoadInfo17ChristchurchEvent", "roadClosureStatus"]
+- ["C8RoadInfo17ChristchurchEvent", "significance"]
+- ["C8RoadInfo17ChristchurchEvent", "startDate"]
+- ["C8RoadInfo17ChristchurchEvent", "timeOfDay"]
+- ["C8RoadInfo17ChristchurchEvent", "title"]
+- ["C8RoadInfo17ChristchurchEvent", "trafficImpacts"]
+- ["PSs23CustomStringConvertible", "Element"]
+- ["PSs23CustomStringConvertible", "description"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "Element"]
+- ["PSs8Hashable", "Element"]
+- ["CSo7NSArray", "Element"]
+- ["PSo8NSCoding", "Element"]
+- ["PSo9NSCopying", "Element"]
+- ["PSo17NSFastEnumeration", "Element"]
+- ["CSo14NSMutableArray", "Element"]
+- ["PSo16NSMutableCopying", "Element"]
+- ["CSo8NSObject", "Element"]
+- ["PSo16NSObjectProtocol", "Element"]
+- ["PSo14NSSecureCoding", "Element"]
+- ["PSs12SequenceType", "Element"]
+- ["PSs12_Reflectable", "Element"]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs23ArrayLiteralConvertible"
+- "PSs11CVarArgType"
+- "C8RoadInfo17ChristchurchEvent"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "CSo7NSArray"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo17NSFastEnumeration"
+- "CSo14NSMutableArray"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "PSs12SequenceType"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+interface-hash: "61f60151df392a189086c0517cf3ce1b"

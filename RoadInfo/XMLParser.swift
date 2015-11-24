@@ -55,13 +55,13 @@ class XMLParser: NSObject, NSXMLParserDelegate {
             eventArray[count].alternativeRoute = string
             
         case "tns:directLineDistance1":
-            eventArray[count].directLineDistance.addObject(string)
+            eventArray[count].directLineDistance!.addObject(string)
             
         case "tns:directLineDistance2":
-            eventArray[count].directLineDistance.addObject(string)
+            eventArray[count].directLineDistance!.addObject(string)
             
         case "tns:directLineDistance3":
-            eventArray[count].directLineDistance.addObject(string)
+            eventArray[count].directLineDistance!.addObject(string)
             
         case "tns:endDate":
             let date: NSDate = formatDate(string)
@@ -79,10 +79,12 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         case "tns:eventIsland":
             eventArray[count].eventIsland = string
         case "tns:eventType":
+            //print(string)
             eventArray[count].eventType = string
         case "tns:expectedResolution":
             eventArray[count].expectedResolution = string
         case "tns:impact":
+            //print(string)
             eventArray[count].impact = string
         case "tns:locationArea":
             eventArray[count].locationArea = string
@@ -93,7 +95,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
                eventArray[count].planned = false
             }
         case "tns:location":
-            eventArray[count].location.addObject(string)
+            eventArray[count].location!.addObject(string)
         case "tns:restrictions":
             eventArray[count].restrictions = string
         case "tns:startDate":
@@ -128,7 +130,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
             eventArray[count].supplier = string
             
         case "tns:eventRegions":
-            eventArray[count].eventRegions.addObject(string)
+            eventArray[count].eventRegions!.addObject(string)
             
         default:
             break
