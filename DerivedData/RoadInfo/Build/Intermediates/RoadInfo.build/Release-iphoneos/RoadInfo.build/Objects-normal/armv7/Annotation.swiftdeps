@@ -6,72 +6,84 @@ provides-nominal:
 provides-member:
 - ["C8RoadInfo10Annotation", ""]
 provides-dynamic-lookup:
-- "image"
 - "coordinate"
-- "title"
 - "subtitle"
+- "title"
+- "image"
 depends-top-level:
 - "UIImage"
-- "Annotation"
-- "NSObject"
-- "MKAnnotation"
-- !private "StringLiteralType"
 - "String"
 - "CLLocationCoordinate2D"
+- "Annotation"
+- "MKAnnotation"
+- !private "StringLiteralType"
+- "NSObject"
+- "RoadEvent"
 depends-member:
 - ["C8RoadInfo10Annotation", "CLLocationCoordinate2D"]
+- ["C8RoadInfo10Annotation", "RoadEvent"]
 - ["C8RoadInfo10Annotation", "String"]
 - ["C8RoadInfo10Annotation", "UIImage"]
 - ["C8RoadInfo10Annotation", "coordinate"]
 - ["C8RoadInfo10Annotation", "deinit"]
+- ["C8RoadInfo10Annotation", "event"]
 - ["C8RoadInfo10Annotation", "image"]
 - ["C8RoadInfo10Annotation", "init"]
 - ["C8RoadInfo10Annotation", "subtitle"]
 - ["C8RoadInfo10Annotation", "title"]
 - ["PSs9AnyObject", "coordinate"]
+- ["PSs9AnyObject", "event"]
 - ["PSs9AnyObject", "image"]
 - ["PSs9AnyObject", "init"]
 - ["PSs9AnyObject", "subtitle"]
 - ["PSs9AnyObject", "title"]
 - ["PSs9AnyObject", ""]
 - ["PSs11CVarArgType", "coordinate"]
+- ["PSs11CVarArgType", "event"]
 - ["PSs11CVarArgType", "image"]
 - ["PSs11CVarArgType", "init"]
 - ["PSs11CVarArgType", "subtitle"]
 - ["PSs11CVarArgType", "title"]
 - ["PSs11CVarArgType", ""]
 - ["PSs23CustomStringConvertible", "coordinate"]
+- ["PSs23CustomStringConvertible", "event"]
 - ["PSs23CustomStringConvertible", "image"]
 - ["PSs23CustomStringConvertible", "init"]
 - ["PSs23CustomStringConvertible", "subtitle"]
 - ["PSs23CustomStringConvertible", "title"]
 - ["PSs23CustomStringConvertible", ""]
 - ["PSs9Equatable", "coordinate"]
+- ["PSs9Equatable", "event"]
 - ["PSs9Equatable", "image"]
 - ["PSs9Equatable", "init"]
 - ["PSs9Equatable", "subtitle"]
 - ["PSs9Equatable", "title"]
 - ["PSs9Equatable", ""]
 - ["PSs8Hashable", "coordinate"]
+- ["PSs8Hashable", "event"]
 - ["PSs8Hashable", "image"]
 - ["PSs8Hashable", "init"]
 - ["PSs8Hashable", "subtitle"]
 - ["PSs8Hashable", "title"]
 - ["PSs8Hashable", ""]
 - ["PSo12MKAnnotation", "coordinate"]
+- !private ["PSo12MKAnnotation", "event"]
 - ["PSo12MKAnnotation", "subtitle"]
 - ["PSo12MKAnnotation", "title"]
 - ["PSo12MKAnnotation", ""]
 - ["CSo8NSObject", "CLLocationCoordinate2D"]
+- ["CSo8NSObject", "RoadEvent"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIImage"]
 - ["CSo8NSObject", "coordinate"]
+- ["CSo8NSObject", "event"]
 - ["CSo8NSObject", "image"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "subtitle"]
 - ["CSo8NSObject", "title"]
 - ["CSo8NSObject", ""]
 - ["PSo16NSObjectProtocol", "coordinate"]
+- ["PSo16NSObjectProtocol", "event"]
 - ["PSo16NSObjectProtocol", "image"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "subtitle"]
@@ -100,4 +112,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
-interface-hash: "9398822ea6d4a433b952b849c41afa45"
+interface-hash: "d108080eeebc2c85ecff54499c3ff4d0"

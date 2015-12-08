@@ -9,34 +9,34 @@ provides-member:
 - ["C8RoadInfo9RoadEvent", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSCharacterSet"
-- !private "--"
-- !private "!="
-- !private "=="
-- "RoadEvent"
-- "Bool"
-- "Array"
-- !private "ExtendedGraphemeClusterType"
-- "Coordinates"
-- !private "+"
-- !private "NSDateFormatter"
-- !private "StringLiteralType"
-- !private "NZMGConverter"
-- !private "+="
-- !private "++"
-- "Coordinate"
-- "Int"
-- !private "<"
-- !private "NSTimeZone"
-- !private "Character"
-- "String"
 - "Double"
+- !private "StringLiteralType"
 - "NSMutableArray"
-- !private "BooleanLiteralType"
-- !private "*"
+- !private "NSCharacterSet"
+- "Int"
 - !private "UnicodeScalarType"
-- "CustomStringConvertible"
+- "Bool"
+- !private "+="
 - "NSDate"
+- !private "*"
+- !private "++"
+- !private "=="
+- !private "NZMGConverter"
+- !private "NSTimeZone"
+- !private "ExtendedGraphemeClusterType"
+- !private "Character"
+- "Coordinate"
+- "RoadEvent"
+- "CustomStringConvertible"
+- !private "BooleanLiteralType"
+- !private "--"
+- "Array"
+- !private "+"
+- !private "!="
+- !private "NSDateFormatter"
+- "String"
+- !private "<"
+- "Coordinates"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - ["PSs9AnyObject", "Array"]
@@ -275,7 +275,7 @@ depends-member:
 - !private ["PSs8Hashable", "substringFromIndex"]
 - !private ["PSs8Hashable", "substringToIndex"]
 - !private ["PSs8Hashable", "timeZone"]
-- ["SQ", "deinit"]
+- !private ["SQ", "deinit"]
 - !private ["VVSS13CharacterView5Index", "Distance"]
 - !private ["VVSS13CharacterView5Index", "advancedBy"]
 - !private ["VVSS13CharacterView5Index", "distanceTo"]
@@ -412,7 +412,7 @@ depends-member:
 - !private ["C8RoadInfo13NZMGConverter", "nzmgToNZGD1949"]
 - !private ["PSs21NilLiteralConvertible", "Some"]
 - !private ["Sq", "Some"]
-- !private ["Sq", "deinit"]
+- ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "characters"]
 - !private ["PSs16OutputStreamType", "init"]
 - !private ["PSs16OutputStreamType", "startIndex"]
@@ -461,6 +461,7 @@ depends-member:
 - ["C8RoadInfo9RoadEvent", "eventType"]
 - ["C8RoadInfo9RoadEvent", "expectedResolution"]
 - !private ["C8RoadInfo9RoadEvent", "getDate"]
+- ["C8RoadInfo9RoadEvent", "getEventDetails"]
 - !private ["C8RoadInfo9RoadEvent", "getSubstringFromIndex"]
 - !private ["C8RoadInfo9RoadEvent", "getSubstringToIndex"]
 - ["C8RoadInfo9RoadEvent", "impact"]
@@ -669,7 +670,7 @@ depends-nominal:
 - !private "PSs16ForwardIndexType"
 - !private "PSs13GeneratorType"
 - "PSs8Hashable"
-- "SQ"
+- !private "SQ"
 - !private "VVSS13CharacterView5Index"
 - "PSs9Indexable"
 - !private "VSs17IndexingGenerator"
@@ -701,7 +702,7 @@ depends-nominal:
 - !private "CSo10NSTimeZone"
 - !private "C8RoadInfo13NZMGConverter"
 - !private "PSs21NilLiteralConvertible"
-- !private "Sq"
+- "Sq"
 - !private "PSs16OutputStreamType"
 - !private "PSs21RandomAccessIndexType"
 - "PSs30RangeReplaceableCollectionType"
@@ -754,4 +755,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
-interface-hash: "b8b57c54d0b5a3874ae99510474671b2"
+interface-hash: "754b6c0bc19ef023775160b0e1e94fd0"

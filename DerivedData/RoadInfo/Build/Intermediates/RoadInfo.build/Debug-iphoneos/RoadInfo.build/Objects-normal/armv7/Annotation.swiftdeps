@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C8RoadInfo10Annotation", ""]
 provides-dynamic-lookup:
-- "subtitle"
 - "image"
+- "subtitle"
 - "title"
 - "coordinate"
 depends-top-level:
-- "CLLocationCoordinate2D"
-- !private "StringLiteralType"
-- "RoadEvent"
 - "MKAnnotation"
 - "Annotation"
-- "String"
-- "UIImage"
 - "NSObject"
+- "CLLocationCoordinate2D"
+- !private "StringLiteralType"
+- "String"
+- "RoadEvent"
+- "UIImage"
 depends-member:
 - ["C8RoadInfo10Annotation", "CLLocationCoordinate2D"]
 - ["C8RoadInfo10Annotation", "RoadEvent"]

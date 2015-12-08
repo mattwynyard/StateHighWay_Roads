@@ -1,0 +1,301 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "URLConnection"
+provides-nominal:
+- "C8RoadInfo13URLConnection"
+provides-member:
+- ["C8RoadInfo13URLConnection", ""]
+provides-dynamic-lookup:
+- "httpGet"
+- "callback"
+depends-top-level:
+- !private "NSURLSession"
+- "Void"
+- !private "NSOperationQueue"
+- !private "NSData"
+- !private "NSError"
+- "NSURLSessionDelegate"
+- "URLConnection"
+- !private "!="
+- !private "NSASCIIStringEncoding"
+- "print"
+- !private "NSURLSessionConfiguration"
+- "String"
+- "=="
+- !private "Dictionary"
+- !private "NSURLResponse"
+- !private "NSString"
+- "NSObject"
+- !private "StringLiteralType"
+- "NSMutableURLRequest"
+depends-member:
+- !private ["PSs9AnyObject", "HTTPAdditionalHeaders"]
+- !private ["PSs9AnyObject", "NSASCIIStringEncoding"]
+- !private ["PSs9AnyObject", "NSOperationQueue"]
+- !private ["PSs9AnyObject", "NSString"]
+- !private ["PSs9AnyObject", "NSURLSession"]
+- !private ["PSs9AnyObject", "NSURLSessionConfiguration"]
+- ["PSs9AnyObject", "URLSession"]
+- ["PSs9AnyObject", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["PSs9AnyObject", "callback"]
+- !private ["PSs9AnyObject", "dataTaskWithRequest"]
+- !private ["PSs9AnyObject", "defaultSessionConfiguration"]
+- !private ["PSs9AnyObject", "deinit"]
+- ["PSs9AnyObject", "httpGet"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "localizedDescription"]
+- !private ["PSs9AnyObject", "mainQueue"]
+- ["PSs9AnyObject", "print"]
+- !private ["PSs9AnyObject", "resume"]
+- ["PSs9AnyObject", ""]
+- ["Sb", "_getBuiltinLogicValue"]
+- ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSs11CVarArgType", "HTTPAdditionalHeaders"]
+- !private ["PSs11CVarArgType", "NSASCIIStringEncoding"]
+- !private ["PSs11CVarArgType", "NSOperationQueue"]
+- !private ["PSs11CVarArgType", "NSString"]
+- !private ["PSs11CVarArgType", "NSURLSession"]
+- !private ["PSs11CVarArgType", "NSURLSessionConfiguration"]
+- ["PSs11CVarArgType", "URLSession"]
+- ["PSs11CVarArgType", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["PSs11CVarArgType", "callback"]
+- !private ["PSs11CVarArgType", "dataTaskWithRequest"]
+- !private ["PSs11CVarArgType", "defaultSessionConfiguration"]
+- ["PSs11CVarArgType", "httpGet"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "localizedDescription"]
+- !private ["PSs11CVarArgType", "mainQueue"]
+- ["PSs11CVarArgType", "print"]
+- !private ["PSs11CVarArgType", "resume"]
+- ["PSs11CVarArgType", ""]
+- !private ["PSs14CollectionType", "Key"]
+- !private ["PSs14CollectionType", "Value"]
+- !private ["PSs28CustomDebugStringConvertible", "Key"]
+- !private ["PSs28CustomDebugStringConvertible", "Value"]
+- !private ["PSs23CustomStringConvertible", "HTTPAdditionalHeaders"]
+- !private ["PSs23CustomStringConvertible", "Key"]
+- !private ["PSs23CustomStringConvertible", "NSASCIIStringEncoding"]
+- !private ["PSs23CustomStringConvertible", "NSOperationQueue"]
+- !private ["PSs23CustomStringConvertible", "NSString"]
+- !private ["PSs23CustomStringConvertible", "NSURLSession"]
+- !private ["PSs23CustomStringConvertible", "NSURLSessionConfiguration"]
+- ["PSs23CustomStringConvertible", "URLSession"]
+- ["PSs23CustomStringConvertible", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["PSs23CustomStringConvertible", "Value"]
+- ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["PSs23CustomStringConvertible", "callback"]
+- !private ["PSs23CustomStringConvertible", "dataTaskWithRequest"]
+- !private ["PSs23CustomStringConvertible", "defaultSessionConfiguration"]
+- ["PSs23CustomStringConvertible", "httpGet"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "localizedDescription"]
+- !private ["PSs23CustomStringConvertible", "mainQueue"]
+- ["PSs23CustomStringConvertible", "print"]
+- !private ["PSs23CustomStringConvertible", "resume"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["VSs10Dictionary", "Key"]
+- !private ["VSs10Dictionary", "Value"]
+- !private ["PSs28DictionaryLiteralConvertible", "Key"]
+- !private ["PSs28DictionaryLiteralConvertible", "Value"]
+- !private ["PSs9Equatable", "HTTPAdditionalHeaders"]
+- !private ["PSs9Equatable", "NSASCIIStringEncoding"]
+- !private ["PSs9Equatable", "NSOperationQueue"]
+- !private ["PSs9Equatable", "NSString"]
+- !private ["PSs9Equatable", "NSURLSession"]
+- !private ["PSs9Equatable", "NSURLSessionConfiguration"]
+- ["PSs9Equatable", "URLSession"]
+- ["PSs9Equatable", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["PSs9Equatable", "_getBuiltinLogicValue"]
+- ["PSs9Equatable", "callback"]
+- !private ["PSs9Equatable", "dataTaskWithRequest"]
+- !private ["PSs9Equatable", "defaultSessionConfiguration"]
+- ["PSs9Equatable", "httpGet"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "localizedDescription"]
+- !private ["PSs9Equatable", "mainQueue"]
+- ["PSs9Equatable", "print"]
+- !private ["PSs9Equatable", "resume"]
+- ["PSs9Equatable", ""]
+- !private ["PSs9ErrorType", "localizedDescription"]
+- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["PSs8Hashable", "HTTPAdditionalHeaders"]
+- !private ["PSs8Hashable", "NSASCIIStringEncoding"]
+- !private ["PSs8Hashable", "NSOperationQueue"]
+- !private ["PSs8Hashable", "NSString"]
+- !private ["PSs8Hashable", "NSURLSession"]
+- !private ["PSs8Hashable", "NSURLSessionConfiguration"]
+- ["PSs8Hashable", "URLSession"]
+- ["PSs8Hashable", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["PSs8Hashable", "_getBuiltinLogicValue"]
+- ["PSs8Hashable", "callback"]
+- !private ["PSs8Hashable", "dataTaskWithRequest"]
+- !private ["PSs8Hashable", "defaultSessionConfiguration"]
+- ["PSs8Hashable", "httpGet"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "localizedDescription"]
+- !private ["PSs8Hashable", "mainQueue"]
+- ["PSs8Hashable", "print"]
+- !private ["PSs8Hashable", "resume"]
+- ["PSs8Hashable", ""]
+- !private ["PSs9Indexable", "Key"]
+- !private ["PSs9Indexable", "Value"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "localizedDescription"]
+- !private ["PSo9NSCopying", "HTTPAdditionalHeaders"]
+- !private ["PSo9NSCopying", "defaultSessionConfiguration"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "localizedDescription"]
+- !private ["PSo9NSCopying", "resume"]
+- !private ["CSo7NSError", "localizedDescription"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "HTTPAdditionalHeaders"]
+- !private ["CSo8NSObject", "NSASCIIStringEncoding"]
+- !private ["CSo8NSObject", "NSData"]
+- !private ["CSo8NSObject", "NSError"]
+- ["CSo8NSObject", "NSMutableURLRequest"]
+- !private ["CSo8NSObject", "NSOperationQueue"]
+- !private ["CSo8NSObject", "NSString"]
+- !private ["CSo8NSObject", "NSURLResponse"]
+- !private ["CSo8NSObject", "NSURLSession"]
+- !private ["CSo8NSObject", "NSURLSessionConfiguration"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "URLSession"]
+- ["CSo8NSObject", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["CSo8NSObject", "Void"]
+- ["CSo8NSObject", "callback"]
+- !private ["CSo8NSObject", "dataTaskWithRequest"]
+- !private ["CSo8NSObject", "defaultSessionConfiguration"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "httpGet"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "localizedDescription"]
+- !private ["CSo8NSObject", "mainQueue"]
+- ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "resume"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "HTTPAdditionalHeaders"]
+- !private ["PSo16NSObjectProtocol", "NSASCIIStringEncoding"]
+- !private ["PSo16NSObjectProtocol", "NSOperationQueue"]
+- !private ["PSo16NSObjectProtocol", "NSString"]
+- !private ["PSo16NSObjectProtocol", "NSURLSession"]
+- !private ["PSo16NSObjectProtocol", "NSURLSessionConfiguration"]
+- ["PSo16NSObjectProtocol", "URLSession"]
+- ["PSo16NSObjectProtocol", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["PSo16NSObjectProtocol", "callback"]
+- !private ["PSo16NSObjectProtocol", "dataTaskWithRequest"]
+- !private ["PSo16NSObjectProtocol", "defaultSessionConfiguration"]
+- ["PSo16NSObjectProtocol", "httpGet"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "localizedDescription"]
+- !private ["PSo16NSObjectProtocol", "mainQueue"]
+- ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "resume"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["CSo16NSOperationQueue", "mainQueue"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "localizedDescription"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo12NSURLSession", "dataTaskWithRequest"]
+- !private ["CSo12NSURLSession", "init"]
+- !private ["CSo25NSURLSessionConfiguration", "HTTPAdditionalHeaders"]
+- !private ["CSo25NSURLSessionConfiguration", "defaultSessionConfiguration"]
+- !private ["CSo20NSURLSessionDataTask", "resume"]
+- !private ["PSo20NSURLSessionDelegate", "NSASCIIStringEncoding"]
+- !private ["PSo20NSURLSessionDelegate", "NSOperationQueue"]
+- !private ["PSo20NSURLSessionDelegate", "NSString"]
+- !private ["PSo20NSURLSessionDelegate", "NSURLSession"]
+- !private ["PSo20NSURLSessionDelegate", "NSURLSessionConfiguration"]
+- ["PSo20NSURLSessionDelegate", "URLSession"]
+- ["PSo20NSURLSessionDelegate", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["PSo20NSURLSessionDelegate", "print"]
+- ["PSo20NSURLSessionDelegate", ""]
+- !private ["CSo16NSURLSessionTask", "resume"]
+- ["Sq", "deinit"]
+- !private ["PSs12SequenceType", "Key"]
+- !private ["PSs12SequenceType", "Value"]
+- !private ["SS", "deinit"]
+- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["C8RoadInfo13URLConnection", "NSASCIIStringEncoding"]
+- !private ["C8RoadInfo13URLConnection", "NSData"]
+- !private ["C8RoadInfo13URLConnection", "NSError"]
+- ["C8RoadInfo13URLConnection", "NSMutableURLRequest"]
+- !private ["C8RoadInfo13URLConnection", "NSOperationQueue"]
+- !private ["C8RoadInfo13URLConnection", "NSString"]
+- !private ["C8RoadInfo13URLConnection", "NSURLResponse"]
+- !private ["C8RoadInfo13URLConnection", "NSURLSession"]
+- !private ["C8RoadInfo13URLConnection", "NSURLSessionConfiguration"]
+- ["C8RoadInfo13URLConnection", "String"]
+- ["C8RoadInfo13URLConnection", "URLSession"]
+- ["C8RoadInfo13URLConnection", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["C8RoadInfo13URLConnection", "Void"]
+- ["C8RoadInfo13URLConnection", "callback"]
+- ["C8RoadInfo13URLConnection", "deinit"]
+- ["C8RoadInfo13URLConnection", "httpGet"]
+- ["C8RoadInfo13URLConnection", "init"]
+- ["C8RoadInfo13URLConnection", "print"]
+- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs16_CocoaStringType", "init"]
+- !private ["PSs21_ObjectiveCBridgeable", "Key"]
+- !private ["PSs21_ObjectiveCBridgeable", "Value"]
+- ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["VSs26_OptionalNilComparisonType", "deinit"]
+- !private ["PSs12_Reflectable", "Key"]
+- !private ["PSs12_Reflectable", "Value"]
+- ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "init"]
+depends-nominal:
+- "PSs9AnyObject"
+- "Sb"
+- "PSs25BooleanLiteralConvertible"
+- "PSs11BooleanType"
+- "PSs11CVarArgType"
+- !private "PSs14CollectionType"
+- !private "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- !private "VSs10Dictionary"
+- !private "PSs28DictionaryLiteralConvertible"
+- "PSs9Equatable"
+- !private "PSs9ErrorType"
+- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- "PSs8Hashable"
+- !private "PSs9Indexable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo7NSError"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo16NSOperationQueue"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo12NSURLSession"
+- !private "CSo25NSURLSessionConfiguration"
+- !private "CSo20NSURLSessionDataTask"
+- "PSo20NSURLSessionDelegate"
+- !private "CSo16NSURLSessionTask"
+- "Sq"
+- !private "PSs12SequenceType"
+- !private "SS"
+- !private "PSs24StringLiteralConvertible"
+- "C8RoadInfo13URLConnection"
+- !private "PSs31UnicodeScalarLiteralConvertible"
+- "PSs33_BuiltinBooleanLiteralConvertible"
+- !private "PSs16_CocoaStringType"
+- "PSs21_ObjectiveCBridgeable"
+- "VSs26_OptionalNilComparisonType"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+interface-hash: "09eac7b90847f00fa8f5b255e9fc8005"

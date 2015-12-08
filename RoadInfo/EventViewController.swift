@@ -57,11 +57,25 @@ class EventViewController: UITableViewController {
         //cell.selectionStyle = UITableViewCellSelectionStyleNone
         
         cell.textLabel?.numberOfLines = 0
+        
         if indexPath.row % 2 == 0 {
             let altCellColor: UIColor  = UIColor(white:0.7, alpha:0.1)
             cell.backgroundColor = altCellColor
         }
+//        if indexPath.row == 3 {
+//            cell.detailTextLabel?.numberOfLines = 0
+//            cell.textLabel?.text = "Description"
+//            cell.detailTextLabel?.text  = items![indexPath.row]
+//            cell.textLabel?.font = UIFont.boldSystemFontOfSize(18.0)
+//            cell.detailTextLabel?.font = UIFont.systemFontOfSize(16.0)
+//        }
         if indexPath.row == 4 {
+            cell.textLabel?.text = "Last Updated"
+            cell.detailTextLabel?.text  = items![indexPath.row]
+            cell.textLabel?.font = UIFont.boldSystemFontOfSize(18.0)
+            cell.detailTextLabel?.font = UIFont.systemFontOfSize(16.0)
+        }
+        if indexPath.row == 5 {
             cell.textLabel?.text = "Expected Resolution"
             cell.detailTextLabel?.text  = items![indexPath.row]
             cell.textLabel?.font = UIFont.boldSystemFontOfSize(18.0)

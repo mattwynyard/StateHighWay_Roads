@@ -9,14 +9,12 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Foundation
 
-
-
-class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, URLConnectionDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
 
-    
     let locationManager = CLLocationManager()
     var roadEvents: [RoadEvent]! = nil
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -25,9 +23,8 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
     var chchParser: ChristchurchXML? = nil
     var annotations = [Annotation]()
     var polylines = [MKPolyline]()
-    var running = true
     let request = NSURL(string: "https://infoconnect1.highwayinfo.govt.nz/ic/jbi/TREIS/REST/FeedService/")!
-    var requestChCh = NSURL(string: "https://infoconnect1.highwayinfo.govt.nz/ic/jbi/TMP/REST/FeedService/")!
+    //var request = NSURL(string: "https://infoconnect1.highwayinfo.govt.nz/ic/jbi/TMP/REST/FeedService/")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,18 +36,32 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
         self.mapView.delegate = self
         self.mapView.pitchEnabled = false
         self.mapView.rotateEnabled = false
-        loadData(request)
+        let url:  URLConnection = URLConnection()
+        url.delegate = self
+        url.loadData(request)
         
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    func setRoadEvents(events: [RoadEvent]) {
+        eventArray = events
+    }
+
+    func processHighwayData() {
         var i: Int; var j: Int
         for event in eventArray {
             let currentEvent = event
             let array  = event.coordinatesWSG84
             let count: Int = array.count
-            //let eventType = event.eventType
-            //print(eventType!)
+            let eventType = event.eventType
+            print(eventType!)
             let impact = event.impact
             let eventComments = event.eventComments
-            let eventType = event.eventType
+            //let eventType = event.eventType
             for i = 0; i < count; i++ {
                 var polyline = [CLLocationCoordinate2D]()
                 for j = 0; j < array[i].count; j++ {
@@ -69,38 +80,15 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
                     annotationImage(annotation, event: event.impact!)
                     annotations.append(annotation)
                 }
-                mapView.addOverlay(MKPolyline(coordinates: &polyline, count: array[i].count))
+                self.mapView.addOverlay(MKPolyline(coordinates: &polyline, count: array[i].count))
             } //end for
         }
-        mapView.addAnnotations(annotations)
-        
-
+        self.mapView.addAnnotations(annotations)
     }
     
-        
-        func loadData(request: NSURL) {
-            httpGet(request) {
-                (responseData, xmlString, error) -> Void in
-                if error != nil {
-                    print(error!)
-                    self.running = false
-                } else {
-                    //print(xmlString)
-                    self.xmlParser = XMLParser(data: responseData)
-                    //self.chchParser = ChristchurchXML(data: responseData)
-                    self.eventArray = self.xmlParser?.getEventArray()
-                    self.running = false
-                }
-            }
-            
-            while(running) {
-                NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate())
-            }
-        }
-        
     /**
      Assigns image to the annotation depending on the event type and appends
-     annotation to the annotations array
+     annotation to the annotations array.
      - Parameter annotation: The annotation.
      - Parameter: the type of event
      */
@@ -135,13 +123,6 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
         //return nil
     }
 
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations.last
@@ -187,18 +168,10 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
             let annotation = view.annotation as! Annotation
             let event = annotation.event
             
-            
-                        
             if control == view.rightCalloutAccessoryView {
                 
                 let destination = self.storyboard!.instantiateViewControllerWithIdentifier("EventViewController") as! EventViewController
-                
-                
-                
-
-                
                 self.navigationController!.pushViewController(destination, animated: true)
-
                 //let destination = EventViewController()
                 //navigationController?.pushViewController(destination, animated: true)
                 destination.event = event
@@ -207,23 +180,7 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
             
     }
     
-    func httpGet(request: NSURL!, callback: (NSData, String, String?) -> Void) {
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-        config.HTTPAdditionalHeaders = ["username" : "mjwynyard", "password" : "Copper2004"]
-        let session = NSURLSession(configuration: config)
-        let task = session.dataTaskWithURL(request){
-            (data, response, error) -> Void in
-            if error != nil {
-                let errorData = NSData()
-                callback(errorData, "", error!.localizedDescription)
-            } else {
-                let result = NSString(data: data!, encoding:
-                    NSASCIIStringEncoding)!
-                callback(data!, result as String, nil)
-            }
-        }
-        task.resume()
-    }
+
 
 
 }

@@ -9,34 +9,34 @@ provides-member:
 - ["C8RoadInfo9RoadEvent", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NZMGConverter"
-- !private "NSTimeZone"
-- "Array"
-- "NSMutableArray"
-- !private "Character"
-- "NSDate"
-- !private "=="
-- !private "NSCharacterSet"
+- "RoadEvent"
 - "Int"
 - "Double"
-- "Coordinate"
-- !private "+"
+- !private "NSTimeZone"
+- !private "=="
 - "Bool"
+- !private "ExtendedGraphemeClusterType"
+- !private "<"
+- "Coordinate"
+- !private "Character"
 - !private "++"
+- !private "NSCharacterSet"
+- "Array"
 - !private "StringLiteralType"
+- !private "*"
+- !private "NZMGConverter"
 - !private "NSDateFormatter"
-- !private "+="
+- "NSDate"
+- !private "UnicodeScalarType"
 - !private "--"
 - "Coordinates"
-- !private "ExtendedGraphemeClusterType"
-- !private "*"
-- "String"
-- "RoadEvent"
-- !private "<"
-- !private "!="
+- !private "+"
 - "CustomStringConvertible"
-- !private "UnicodeScalarType"
+- !private "!="
+- !private "+="
+- "NSMutableArray"
 - !private "BooleanLiteralType"
+- "String"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - ["PSs9AnyObject", "Array"]
@@ -275,7 +275,7 @@ depends-member:
 - !private ["PSs8Hashable", "substringFromIndex"]
 - !private ["PSs8Hashable", "substringToIndex"]
 - !private ["PSs8Hashable", "timeZone"]
-- ["SQ", "deinit"]
+- !private ["SQ", "deinit"]
 - !private ["VVSS13CharacterView5Index", "Distance"]
 - !private ["VVSS13CharacterView5Index", "advancedBy"]
 - !private ["VVSS13CharacterView5Index", "distanceTo"]
@@ -412,7 +412,7 @@ depends-member:
 - !private ["C8RoadInfo13NZMGConverter", "nzmgToNZGD1949"]
 - !private ["PSs21NilLiteralConvertible", "Some"]
 - !private ["Sq", "Some"]
-- !private ["Sq", "deinit"]
+- ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "characters"]
 - !private ["PSs16OutputStreamType", "init"]
 - !private ["PSs16OutputStreamType", "startIndex"]
@@ -670,7 +670,7 @@ depends-nominal:
 - !private "PSs16ForwardIndexType"
 - !private "PSs13GeneratorType"
 - "PSs8Hashable"
-- "SQ"
+- !private "SQ"
 - !private "VVSS13CharacterView5Index"
 - "PSs9Indexable"
 - !private "VSs17IndexingGenerator"
@@ -702,7 +702,7 @@ depends-nominal:
 - !private "CSo10NSTimeZone"
 - !private "C8RoadInfo13NZMGConverter"
 - !private "PSs21NilLiteralConvertible"
-- !private "Sq"
+- "Sq"
 - !private "PSs16OutputStreamType"
 - !private "PSs21RandomAccessIndexType"
 - "PSs30RangeReplaceableCollectionType"
@@ -755,4 +755,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
-interface-hash: "ba56762dc57a034cf100d0a7ebaa3729"
+interface-hash: "754b6c0bc19ef023775160b0e1e94fd0"

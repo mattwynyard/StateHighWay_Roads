@@ -91,6 +91,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @import CoreLocation;
 @import UIKit;
 @import Foundation;
+@import Foundation.NSURLSession;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -169,6 +170,8 @@ SWIFT_CLASS("_TtC8RoadInfo19EventViewController")
 @class XMLParser;
 @class MKPolyline;
 @class NSURL;
+@class NSMutableURLRequest;
+@class NSURLSession;
 @class MKMapView;
 @protocol MKOverlay;
 @class MKOverlayRenderer;
@@ -177,7 +180,7 @@ SWIFT_CLASS("_TtC8RoadInfo19EventViewController")
 @class UIControl;
 
 SWIFT_CLASS("_TtC8RoadInfo13MapController")
-@interface MapController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface MapController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, NSURLSessionDelegate>
 @property (nonatomic, weak) IBOutlet MKMapView * __null_unspecified mapView;
 @property (nonatomic, readonly, strong) CLLocationManager * __nonnull locationManager;
 @property (nonatomic, readonly, strong) AppDelegate * __nonnull appDelegate;
@@ -187,11 +190,12 @@ SWIFT_CLASS("_TtC8RoadInfo13MapController")
 @property (nonatomic, copy) NSArray<MKPolyline *> * __nonnull polylines;
 @property (nonatomic) BOOL running;
 @property (nonatomic, readonly, strong) NSURL * __nonnull request;
-@property (nonatomic, strong) NSURL * __nonnull requestChCh;
 - (void)viewDidLoad;
 - (void)loadData:(NSURL * __nonnull)request;
+- (void)httpGet:(NSMutableURLRequest * __null_unspecified)request callback:(void (^ __nonnull)(NSString * __nonnull, NSString * __nullable))callback;
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * __nonnull)session;
 
-/// Assigns image to the annotation depending on the event type and appends annotation to the annotations array
+/// Assigns image to the annotation depending on the event type and appends annotation to the annotations array.
 ///
 /// <ul><li>Parameter: the type of event</li></ul>
 /// \param annotation The annotation.
@@ -208,9 +212,16 @@ SWIFT_CLASS("_TtC8RoadInfo13MapController")
 ///
 /// \param view the annoatation view
 - (void)mapView:(MKMapView * __nonnull)mapView annotationView:(MKAnnotationView * __nonnull)view calloutAccessoryControlTapped:(UIControl * __nonnull)control;
-- (void)httpGet:(NSURL * __null_unspecified)request callback:(void (^ __nonnull)(NSData * __nonnull, NSString * __nonnull, NSString * __nullable))callback;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8RoadInfo13URLConnection")
+@interface URLConnection : NSObject <NSURLSessionDelegate>
+@property (nonatomic, copy) void (^ __nonnull callback)(NSString * __nonnull, NSString * __nullable);
+- (void)httpGet:(NSMutableURLRequest * __null_unspecified)request callback:(void (^ __nonnull)(NSString * __nonnull, NSString * __nullable))callback;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

@@ -20,6 +20,7 @@
 		C96666ED1BEADFF200A71C2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96666EB1BEADFF200A71C2F /* LaunchScreen.storyboard */; };
 		C96666F81BEADFF200A71C2F /* RoadInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666F71BEADFF200A71C2F /* RoadInfoTests.swift */; };
 		C96667031BEADFF200A71C2F /* RoadInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96667021BEADFF200A71C2F /* RoadInfoUITests.swift */; };
+		C96B3C0A1C08FC0600E9873F /* URLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B3C091C08FC0600E9873F /* URLConnection.swift */; };
 		C97958CE1BEAEDB800C1667D /* Complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958CD1BEAEDB800C1667D /* Complex.swift */; };
 		C97958D21BEAEDC700C1667D /* NZMGConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958D11BEAEDC700C1667D /* NZMGConverter.swift */; };
 		C97958D51BEAEDD000C1667D /* RoadEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97958D31BEAEDD000C1667D /* RoadEvent.swift */; };
@@ -66,6 +67,7 @@
 		C96666FE1BEADFF200A71C2F /* RoadInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96667021BEADFF200A71C2F /* RoadInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadInfoUITests.swift; sourceTree = "<group>"; };
 		C96667041BEADFF200A71C2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96B3C091C08FC0600E9873F /* URLConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConnection.swift; sourceTree = "<group>"; };
 		C97958CD1BEAEDB800C1667D /* Complex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Complex.swift; sourceTree = "<group>"; };
 		C97958D11BEAEDC700C1667D /* NZMGConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZMGConverter.swift; sourceTree = "<group>"; };
 		C97958D31BEAEDD000C1667D /* RoadEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadEvent.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				C98B9E451C01AB4900C1F894 /* GridConversion */,
 				C98B9E461C01AB6400C1F894 /* XMLParsers */,
 				C90BC36C1BF073F3008E71D9 /* ChristchurchEvent.swift */,
+				C96B3C091C08FC0600E9873F /* URLConnection.swift */,
 				C97958D31BEAEDD000C1667D /* RoadEvent.swift */,
 				C90BC3701BF08732008E71D9 /* Location.swift */,
 				C96666E41BEADFF200A71C2F /* MapController.swift */,
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C90BC36D1BF073F3008E71D9 /* ChristchurchEvent.swift in Sources */,
+				C96B3C0A1C08FC0600E9873F /* URLConnection.swift in Sources */,
 				C9BDF26F1C0005A100A0C886 /* EventViewController.swift in Sources */,
 				C97958D61BEAEDD000C1667D /* XMLParser.swift in Sources */,
 				C96666E51BEADFF200A71C2F /* MapController.swift in Sources */,

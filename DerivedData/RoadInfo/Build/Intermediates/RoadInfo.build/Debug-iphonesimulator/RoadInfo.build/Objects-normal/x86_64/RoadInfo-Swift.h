@@ -91,6 +91,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @import CoreLocation;
 @import UIKit;
 @import Foundation;
+@import Foundation.NSURLSession;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -103,7 +104,6 @@ SWIFT_CLASS("_TtC8RoadInfo10Annotation")
 @property (nonatomic, readonly, copy) NSString * __nullable subtitle;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) UIImage * __null_unspecified image;
-- (nonnull instancetype)initWithTitle:(NSString * __nonnull)title subtitle:(NSString * __nonnull)subtitle coordinate:(CLLocationCoordinate2D)coordinate OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIWindow;
@@ -146,6 +146,26 @@ SWIFT_CLASS("_TtC8RoadInfo15ChristchurchXML")
 - (NSDate * __nonnull)formatDate:(NSString * __nonnull)date;
 @end
 
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC8RoadInfo19EventViewController")
+@interface EventViewController : UITableViewController
+@property (nonatomic, copy) NSArray<NSString *> * __nullable items;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * __nonnull)tableView;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class CLLocationManager;
 @class XMLParser;
 @class MKPolyline;
@@ -155,11 +175,10 @@ SWIFT_CLASS("_TtC8RoadInfo15ChristchurchXML")
 @class MKOverlayRenderer;
 @class CLLocation;
 @class MKAnnotationView;
-@class NSBundle;
-@class NSCoder;
+@class UIControl;
 
 SWIFT_CLASS("_TtC8RoadInfo13MapController")
-@interface MapController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface MapController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, NSURLSessionDelegate>
 @property (nonatomic, weak) IBOutlet MKMapView * __null_unspecified mapView;
 @property (nonatomic, readonly, strong) CLLocationManager * __nonnull locationManager;
 @property (nonatomic, readonly, strong) AppDelegate * __nonnull appDelegate;
@@ -170,14 +189,37 @@ SWIFT_CLASS("_TtC8RoadInfo13MapController")
 @property (nonatomic) BOOL running;
 @property (nonatomic, readonly, strong) NSURL * __nonnull request;
 - (void)viewDidLoad;
+- (void)loadData:(NSURL * __nonnull)request;
+- (void)httpGet:(NSURL * __null_unspecified)request callback:(void (^ __nonnull)(NSData * __nonnull, NSString * __nonnull, NSString * __nullable))callback;
+
+/// Assigns image to the annotation depending on the event type and appends annotation to the annotations array.
+///
+/// <ul><li>Parameter: the type of event</li></ul>
+/// \param annotation The annotation.
 - (void)annotationImage:(Annotation * __nonnull)annotation event:(NSString * __nonnull)event;
 - (MKOverlayRenderer * __nonnull)mapView:(MKMapView * __nonnull)mapView rendererForOverlay:(id <MKOverlay> __nonnull)overlay;
 - (void)didReceiveMemoryWarning;
 - (void)locationManager:(CLLocationManager * __nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * __nonnull)locations;
 - (MKAnnotationView * __nullable)mapView:(MKMapView * __nonnull)mapView viewForAnnotation:(id <MKAnnotation> __nonnull)annotation;
-- (void)httpGet:(NSURL * __null_unspecified)request callback:(void (^ __nonnull)(NSData * __nonnull, NSString * __nonnull, NSString * __nullable))callback;
+
+/// Instantiates a EventViewController when disclosure button on annotation is tapped and sets the event property to the event that has been tapped
+///
+/// <ul><li>Paramter control: The disclosure button</li></ul>
+/// \param mapView The mapview.
+///
+/// \param view the annoatation view
+- (void)mapView:(MKMapView * __nonnull)mapView annotationView:(MKAnnotationView * __nonnull)view calloutAccessoryControlTapped:(UIControl * __nonnull)control;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSMutableURLRequest;
+
+SWIFT_CLASS("_TtC8RoadInfo13URLConnection")
+@interface URLConnection : NSObject <NSURLSessionDelegate>
+@property (nonatomic, copy) void (^ __nonnull callback)(NSString * __nonnull, NSString * __nullable);
+- (void)httpGet:(NSMutableURLRequest * __null_unspecified)request callback:(void (^ __nonnull)(NSString * __nonnull, NSString * __nullable))callback;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

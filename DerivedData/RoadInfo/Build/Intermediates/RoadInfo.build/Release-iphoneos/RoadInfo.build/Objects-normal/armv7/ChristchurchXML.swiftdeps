@@ -6,41 +6,42 @@ provides-nominal:
 provides-member:
 - ["C8RoadInfo15ChristchurchXML", ""]
 provides-dynamic-lookup:
-- "_data"
-- "locationCount"
-- "jobLevels"
-- "locations"
-- "count"
-- "parser"
-- "parser"
-- "parser"
-- "parser"
-- "parser"
+- "formatDate"
 - "trafficImpacts"
+- "currentElement"
+- "_data"
 - "parserDidEndDocument"
 - "parserDidStartDocument"
-- "currentElement"
-- "formatDate"
+- "locations"
+- "count"
+- "jobLevels"
+- "locationCount"
+- "parser"
+- "parser"
+- "parser"
+- "parser"
+- "parser"
 depends-top-level:
-- "NSXMLParser"
-- !private "NSDateFormatter"
-- "BooleanLiteralType"
-- !private "++"
-- "NSDate"
-- "NSData"
+- "ChristchurchXML"
 - "ChristchurchEvent"
 - "Int"
-- "Bool"
-- "NSError"
-- "NSObject"
-- "ChristchurchXML"
-- !private "StringLiteralType"
-- "NSXMLParserDelegate"
+- "NSXMLParser"
 - !private "Location"
-- !private "print"
-- !private "=="
 - !private "~="
+- !private "=="
+- !private "print"
+- "NSObject"
+- "Bool"
+- !private "StringLiteralType"
+- !private "++"
 - "String"
+- "NSDate"
+- "NSError"
+- !private "NSDateFormatter"
+- "NSXMLParserDelegate"
+- "NSData"
+- !private "&&"
+- "BooleanLiteralType"
 depends-member:
 - ["PSs9AnyObject", "ChristchurchEvent"]
 - !private ["PSs9AnyObject", "Location"]
@@ -70,6 +71,7 @@ depends-member:
 - ["PSs9AnyObject", "parserDidStartDocument"]
 - !private ["PSs9AnyObject", "print"]
 - ["PSs9AnyObject", "trafficImpacts"]
+- !private ["PSs9AnyObject", "type"]
 - ["PSs9AnyObject", ""]
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
@@ -302,6 +304,7 @@ depends-member:
 - !private ["C8RoadInfo8Location", "dataType"]
 - !private ["C8RoadInfo8Location", "deinit"]
 - !private ["C8RoadInfo8Location", "init"]
+- !private ["C8RoadInfo8Location", "type"]
 - !private ["PSs14MirrorPathType", "Distance"]
 - !private ["PSs14MirrorPathType", "IntegerLiteralType"]
 - !private ["PSs14MirrorPathType", "init"]
@@ -441,6 +444,7 @@ depends-member:
 - !private ["PSo19NSXMLParserDelegate", "print"]
 - !private ["PSo19NSXMLParserDelegate", "trafficImpacts"]
 - ["PSo19NSXMLParserDelegate", ""]
+- !private ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "init"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
@@ -600,6 +604,7 @@ depends-nominal:
 - !private "CSo8NSString"
 - !private "CSo11NSXMLParser"
 - "PSo19NSXMLParserDelegate"
+- !private "Sq"
 - !private "PSs16OutputStreamType"
 - !private "PSs21RandomAccessIndexType"
 - !private "VSs5Range"

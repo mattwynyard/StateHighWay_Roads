@@ -6,79 +6,81 @@ provides-nominal:
 provides-member:
 - ["C8RoadInfo13MapController", ""]
 provides-dynamic-lookup:
-- "polylines"
-- "loadData"
-- "locationManager"
-- "locationManager"
-- "request"
+- "didReceiveMemoryWarning"
+- "annotations"
+- "running"
 - "mapView"
 - "mapView"
 - "mapView"
 - "mapView"
 - "xmlParser"
+- "loadData"
 - "appDelegate"
-- "running"
-- "httpGet"
-- "annotations"
-- "annotationImage"
+- "polylines"
+- "request"
 - "viewDidLoad"
+- "httpGet"
+- "locationManager"
+- "locationManager"
+- "URLSessionDidFinishEventsForBackgroundURLSession"
 - "chchParser"
-- "didReceiveMemoryWarning"
-- "requestChCh"
+- "annotationImage"
 depends-top-level:
 - "StringLiteralType"
-- "MKOverlay"
-- "MKPolyline"
-- "UIControl"
-- "String"
-- "XMLParser"
-- !private "NSDefaultRunLoopMode"
-- "Annotation"
-- !private "++"
-- "RoadEvent"
-- !private "Double"
-- "MKMapView"
-- !private "NSRunLoop"
-- "CLLocationManagerDelegate"
-- !private "UIImage"
-- "MKAnnotationView"
-- "NSURL"
-- !private "<"
-- "UIViewController"
-- "MKMapViewDelegate"
-- !private "Int"
-- !private "<="
-- !private "MKCoordinateSpan"
-- "AppDelegate"
-- !private "NSDate"
-- !private "NSURLSession"
-- "NSData"
-- !private "!="
-- "ChristchurchXML"
-- "UIApplication"
-- !private "NSString"
-- !private "MKPolylineRenderer"
+- !private "print"
 - !private "CLLocationCoordinate2D"
-- !private "MKCoordinateRegion"
-- !private "UIView"
-- "CLLocation"
-- "MKAnnotation"
-- "MapController"
-- !private "Dictionary"
-- !private "~="
-- !private "=="
-- !private "UIButton"
-- !private "kCLLocationAccuracyBest"
+- "RoadEvent"
+- "String"
+- "Annotation"
+- "MKAnnotationView"
+- !private "++"
+- "MKOverlay"
+- !private "UIImage"
+- !private "Int"
 - !private "NSURLSessionConfiguration"
-- !private "NSASCIIStringEncoding"
-- "BooleanLiteralType"
+- !private "Dictionary"
+- "Void"
+- !private "<"
+- !private "UIView"
+- "UIViewController"
+- !private "Double"
 - !private "UIColor"
 - "MKOverlayRenderer"
-- "Void"
-- "CLLocationManager"
-- !private "print"
-- !private "EventViewController"
 - !private "CGPoint"
+- "CLLocationManager"
+- !private "<="
+- "ChristchurchXML"
+- !private "NSError"
+- "CLLocationManagerDelegate"
+- !private "NSOperationQueue"
+- "MKMapViewDelegate"
+- !private "UIButton"
+- "UIApplication"
+- !private "kCLLocationAccuracyBest"
+- "NSURLSession"
+- "XMLParser"
+- !private "MKPolylineRenderer"
+- !private "NSData"
+- !private "!="
+- !private "~="
+- !private "=="
+- "NSURL"
+- "MKMapView"
+- "NSMutableURLRequest"
+- "CLLocation"
+- "BooleanLiteralType"
+- !private "MKCoordinateSpan"
+- "NSURLSessionDelegate"
+- "MapController"
+- !private "EventViewController"
+- "AppDelegate"
+- "MKAnnotation"
+- !private "NSString"
+- "MKPolyline"
+- !private "NSURLResponse"
+- !private "NSASCIIStringEncoding"
+- !private "MKCoordinateRegion"
+- "UIControl"
 depends-member:
 - !private ["C8RoadInfo10Annotation", "deinit"]
 - !private ["C8RoadInfo10Annotation", "event"]
@@ -95,10 +97,8 @@ depends-member:
 - ["PSs9AnyObject", "MKPolyline"]
 - !private ["PSs9AnyObject", "MKPolylineRenderer"]
 - !private ["PSs9AnyObject", "NSASCIIStringEncoding"]
-- !private ["PSs9AnyObject", "NSData"]
-- !private ["PSs9AnyObject", "NSDate"]
-- !private ["PSs9AnyObject", "NSDefaultRunLoopMode"]
-- !private ["PSs9AnyObject", "NSRunLoop"]
+- !private ["PSs9AnyObject", "NSMutableURLRequest"]
+- !private ["PSs9AnyObject", "NSOperationQueue"]
 - !private ["PSs9AnyObject", "NSString"]
 - ["PSs9AnyObject", "NSURL"]
 - !private ["PSs9AnyObject", "NSURLSession"]
@@ -107,7 +107,8 @@ depends-member:
 - !private ["PSs9AnyObject", "UIButton"]
 - !private ["PSs9AnyObject", "UIColor"]
 - !private ["PSs9AnyObject", "UIImage"]
-- !private ["PSs9AnyObject", "XMLParser"]
+- ["PSs9AnyObject", "URLSession"]
+- ["PSs9AnyObject", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSs9AnyObject", "addAnnotations"]
 - !private ["PSs9AnyObject", "addOverlay"]
 - !private ["PSs9AnyObject", "annotation"]
@@ -119,8 +120,7 @@ depends-member:
 - ["PSs9AnyObject", "chchParser"]
 - !private ["PSs9AnyObject", "coordinate"]
 - !private ["PSs9AnyObject", "coordinatesWSG84"]
-- !private ["PSs9AnyObject", "currentRunLoop"]
-- !private ["PSs9AnyObject", "dataTaskWithURL"]
+- !private ["PSs9AnyObject", "dataTaskWithRequest"]
 - !private ["PSs9AnyObject", "defaultSessionConfiguration"]
 - !private ["PSs9AnyObject", "deinit"]
 - ["PSs9AnyObject", "delegate"]
@@ -130,7 +130,6 @@ depends-member:
 - ["PSs9AnyObject", "eventArray"]
 - !private ["PSs9AnyObject", "eventComments"]
 - !private ["PSs9AnyObject", "eventType"]
-- !private ["PSs9AnyObject", "getEventArray"]
 - ["PSs9AnyObject", "httpGet"]
 - !private ["PSs9AnyObject", "image"]
 - !private ["PSs9AnyObject", "impact"]
@@ -144,6 +143,7 @@ depends-member:
 - ["PSs9AnyObject", "locationManagerDidPauseLocationUpdates"]
 - ["PSs9AnyObject", "locationManagerDidResumeLocationUpdates"]
 - ["PSs9AnyObject", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSs9AnyObject", "mainQueue"]
 - ["PSs9AnyObject", "mapView"]
 - ["PSs9AnyObject", "mapViewDidFailLoadingMap"]
 - ["PSs9AnyObject", "mapViewDidFinishLoadingMap"]
@@ -159,13 +159,11 @@ depends-member:
 - !private ["PSs9AnyObject", "pushViewController"]
 - !private ["PSs9AnyObject", "redColor"]
 - ["PSs9AnyObject", "request"]
-- ["PSs9AnyObject", "requestChCh"]
 - !private ["PSs9AnyObject", "requestWhenInUseAuthorization"]
 - !private ["PSs9AnyObject", "resume"]
 - !private ["PSs9AnyObject", "rightCalloutAccessoryView"]
 - ["PSs9AnyObject", "roadEvents"]
 - !private ["PSs9AnyObject", "rotateEnabled"]
-- !private ["PSs9AnyObject", "runMode"]
 - ["PSs9AnyObject", "running"]
 - !private ["PSs9AnyObject", "setRegion"]
 - ["PSs9AnyObject", "sharedApplication"]
@@ -227,10 +225,8 @@ depends-member:
 - ["PSo25CLLocationManagerDelegate", "MKPolyline"]
 - !private ["PSo25CLLocationManagerDelegate", "MKPolylineRenderer"]
 - !private ["PSo25CLLocationManagerDelegate", "NSASCIIStringEncoding"]
-- !private ["PSo25CLLocationManagerDelegate", "NSData"]
-- !private ["PSo25CLLocationManagerDelegate", "NSDate"]
-- !private ["PSo25CLLocationManagerDelegate", "NSDefaultRunLoopMode"]
-- !private ["PSo25CLLocationManagerDelegate", "NSRunLoop"]
+- !private ["PSo25CLLocationManagerDelegate", "NSMutableURLRequest"]
+- !private ["PSo25CLLocationManagerDelegate", "NSOperationQueue"]
 - !private ["PSo25CLLocationManagerDelegate", "NSString"]
 - ["PSo25CLLocationManagerDelegate", "NSURL"]
 - !private ["PSo25CLLocationManagerDelegate", "NSURLSession"]
@@ -239,7 +235,8 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "UIButton"]
 - !private ["PSo25CLLocationManagerDelegate", "UIColor"]
 - !private ["PSo25CLLocationManagerDelegate", "UIImage"]
-- !private ["PSo25CLLocationManagerDelegate", "XMLParser"]
+- ["PSo25CLLocationManagerDelegate", "URLSession"]
+- ["PSo25CLLocationManagerDelegate", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSo25CLLocationManagerDelegate", "annotationImage"]
 - !private ["PSo25CLLocationManagerDelegate", "annotations"]
 - !private ["PSo25CLLocationManagerDelegate", "eventArray"]
@@ -263,7 +260,6 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "request"]
 - !private ["PSo25CLLocationManagerDelegate", "running"]
 - !private ["PSo25CLLocationManagerDelegate", "storyboard"]
-- !private ["PSo25CLLocationManagerDelegate", "xmlParser"]
 - ["PSo25CLLocationManagerDelegate", ""]
 - ["PSs11CVarArgType", "Annotation"]
 - !private ["PSs11CVarArgType", "CGPoint"]
@@ -278,10 +274,8 @@ depends-member:
 - ["PSs11CVarArgType", "MKPolyline"]
 - !private ["PSs11CVarArgType", "MKPolylineRenderer"]
 - !private ["PSs11CVarArgType", "NSASCIIStringEncoding"]
-- !private ["PSs11CVarArgType", "NSData"]
-- !private ["PSs11CVarArgType", "NSDate"]
-- !private ["PSs11CVarArgType", "NSDefaultRunLoopMode"]
-- !private ["PSs11CVarArgType", "NSRunLoop"]
+- !private ["PSs11CVarArgType", "NSMutableURLRequest"]
+- !private ["PSs11CVarArgType", "NSOperationQueue"]
 - !private ["PSs11CVarArgType", "NSString"]
 - ["PSs11CVarArgType", "NSURL"]
 - !private ["PSs11CVarArgType", "NSURLSession"]
@@ -290,7 +284,8 @@ depends-member:
 - !private ["PSs11CVarArgType", "UIButton"]
 - !private ["PSs11CVarArgType", "UIColor"]
 - !private ["PSs11CVarArgType", "UIImage"]
-- !private ["PSs11CVarArgType", "XMLParser"]
+- ["PSs11CVarArgType", "URLSession"]
+- ["PSs11CVarArgType", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSs11CVarArgType", "addAnnotations"]
 - !private ["PSs11CVarArgType", "addOverlay"]
 - !private ["PSs11CVarArgType", "annotation"]
@@ -301,15 +296,13 @@ depends-member:
 - !private ["PSs11CVarArgType", "canShowCallout"]
 - ["PSs11CVarArgType", "chchParser"]
 - !private ["PSs11CVarArgType", "coordinate"]
-- !private ["PSs11CVarArgType", "currentRunLoop"]
-- !private ["PSs11CVarArgType", "dataTaskWithURL"]
+- !private ["PSs11CVarArgType", "dataTaskWithRequest"]
 - !private ["PSs11CVarArgType", "defaultSessionConfiguration"]
 - ["PSs11CVarArgType", "delegate"]
 - !private ["PSs11CVarArgType", "desiredAccuracy"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["PSs11CVarArgType", "event"]
 - ["PSs11CVarArgType", "eventArray"]
-- !private ["PSs11CVarArgType", "getEventArray"]
 - ["PSs11CVarArgType", "httpGet"]
 - !private ["PSs11CVarArgType", "image"]
 - ["PSs11CVarArgType", "init"]
@@ -322,6 +315,7 @@ depends-member:
 - ["PSs11CVarArgType", "locationManagerDidPauseLocationUpdates"]
 - ["PSs11CVarArgType", "locationManagerDidResumeLocationUpdates"]
 - ["PSs11CVarArgType", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSs11CVarArgType", "mainQueue"]
 - ["PSs11CVarArgType", "mapView"]
 - ["PSs11CVarArgType", "mapViewDidFailLoadingMap"]
 - ["PSs11CVarArgType", "mapViewDidFinishLoadingMap"]
@@ -337,13 +331,11 @@ depends-member:
 - !private ["PSs11CVarArgType", "pushViewController"]
 - !private ["PSs11CVarArgType", "redColor"]
 - ["PSs11CVarArgType", "request"]
-- ["PSs11CVarArgType", "requestChCh"]
 - !private ["PSs11CVarArgType", "requestWhenInUseAuthorization"]
 - !private ["PSs11CVarArgType", "resume"]
 - !private ["PSs11CVarArgType", "rightCalloutAccessoryView"]
 - ["PSs11CVarArgType", "roadEvents"]
 - !private ["PSs11CVarArgType", "rotateEnabled"]
-- !private ["PSs11CVarArgType", "runMode"]
 - ["PSs11CVarArgType", "running"]
 - !private ["PSs11CVarArgType", "setRegion"]
 - ["PSs11CVarArgType", "sharedApplication"]
@@ -396,10 +388,8 @@ depends-member:
 - ["PSs23CustomStringConvertible", "MKPolyline"]
 - !private ["PSs23CustomStringConvertible", "MKPolylineRenderer"]
 - !private ["PSs23CustomStringConvertible", "NSASCIIStringEncoding"]
-- !private ["PSs23CustomStringConvertible", "NSData"]
-- !private ["PSs23CustomStringConvertible", "NSDate"]
-- !private ["PSs23CustomStringConvertible", "NSDefaultRunLoopMode"]
-- !private ["PSs23CustomStringConvertible", "NSRunLoop"]
+- !private ["PSs23CustomStringConvertible", "NSMutableURLRequest"]
+- !private ["PSs23CustomStringConvertible", "NSOperationQueue"]
 - !private ["PSs23CustomStringConvertible", "NSString"]
 - ["PSs23CustomStringConvertible", "NSURL"]
 - !private ["PSs23CustomStringConvertible", "NSURLSession"]
@@ -409,8 +399,9 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "UIButton"]
 - !private ["PSs23CustomStringConvertible", "UIColor"]
 - !private ["PSs23CustomStringConvertible", "UIImage"]
+- ["PSs23CustomStringConvertible", "URLSession"]
+- ["PSs23CustomStringConvertible", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSs23CustomStringConvertible", "Value"]
-- !private ["PSs23CustomStringConvertible", "XMLParser"]
 - !private ["PSs23CustomStringConvertible", "_Element"]
 - !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs23CustomStringConvertible", "addAnnotations"]
@@ -426,8 +417,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "coordinate"]
 - !private ["PSs23CustomStringConvertible", "coordinatesWSG84"]
 - !private ["PSs23CustomStringConvertible", "count"]
-- !private ["PSs23CustomStringConvertible", "currentRunLoop"]
-- !private ["PSs23CustomStringConvertible", "dataTaskWithURL"]
+- !private ["PSs23CustomStringConvertible", "dataTaskWithRequest"]
 - !private ["PSs23CustomStringConvertible", "defaultSessionConfiguration"]
 - ["PSs23CustomStringConvertible", "delegate"]
 - !private ["PSs23CustomStringConvertible", "desiredAccuracy"]
@@ -436,7 +426,6 @@ depends-member:
 - ["PSs23CustomStringConvertible", "eventArray"]
 - !private ["PSs23CustomStringConvertible", "eventComments"]
 - !private ["PSs23CustomStringConvertible", "eventType"]
-- !private ["PSs23CustomStringConvertible", "getEventArray"]
 - ["PSs23CustomStringConvertible", "httpGet"]
 - !private ["PSs23CustomStringConvertible", "image"]
 - !private ["PSs23CustomStringConvertible", "impact"]
@@ -451,6 +440,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "locationManagerDidPauseLocationUpdates"]
 - ["PSs23CustomStringConvertible", "locationManagerDidResumeLocationUpdates"]
 - ["PSs23CustomStringConvertible", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSs23CustomStringConvertible", "mainQueue"]
 - ["PSs23CustomStringConvertible", "mapView"]
 - ["PSs23CustomStringConvertible", "mapViewDidFailLoadingMap"]
 - ["PSs23CustomStringConvertible", "mapViewDidFinishLoadingMap"]
@@ -466,13 +456,11 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "pushViewController"]
 - !private ["PSs23CustomStringConvertible", "redColor"]
 - ["PSs23CustomStringConvertible", "request"]
-- ["PSs23CustomStringConvertible", "requestChCh"]
 - !private ["PSs23CustomStringConvertible", "requestWhenInUseAuthorization"]
 - !private ["PSs23CustomStringConvertible", "resume"]
 - !private ["PSs23CustomStringConvertible", "rightCalloutAccessoryView"]
 - ["PSs23CustomStringConvertible", "roadEvents"]
 - !private ["PSs23CustomStringConvertible", "rotateEnabled"]
-- !private ["PSs23CustomStringConvertible", "runMode"]
 - ["PSs23CustomStringConvertible", "running"]
 - !private ["PSs23CustomStringConvertible", "setRegion"]
 - ["PSs23CustomStringConvertible", "sharedApplication"]
@@ -503,10 +491,8 @@ depends-member:
 - ["PSs9Equatable", "MKPolyline"]
 - !private ["PSs9Equatable", "MKPolylineRenderer"]
 - !private ["PSs9Equatable", "NSASCIIStringEncoding"]
-- !private ["PSs9Equatable", "NSData"]
-- !private ["PSs9Equatable", "NSDate"]
-- !private ["PSs9Equatable", "NSDefaultRunLoopMode"]
-- !private ["PSs9Equatable", "NSRunLoop"]
+- !private ["PSs9Equatable", "NSMutableURLRequest"]
+- !private ["PSs9Equatable", "NSOperationQueue"]
 - !private ["PSs9Equatable", "NSString"]
 - ["PSs9Equatable", "NSURL"]
 - !private ["PSs9Equatable", "NSURLSession"]
@@ -515,7 +501,8 @@ depends-member:
 - !private ["PSs9Equatable", "UIButton"]
 - !private ["PSs9Equatable", "UIColor"]
 - !private ["PSs9Equatable", "UIImage"]
-- !private ["PSs9Equatable", "XMLParser"]
+- ["PSs9Equatable", "URLSession"]
+- ["PSs9Equatable", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
 - !private ["PSs9Equatable", "addAnnotations"]
 - !private ["PSs9Equatable", "addOverlay"]
@@ -527,15 +514,13 @@ depends-member:
 - !private ["PSs9Equatable", "canShowCallout"]
 - ["PSs9Equatable", "chchParser"]
 - !private ["PSs9Equatable", "coordinate"]
-- !private ["PSs9Equatable", "currentRunLoop"]
-- !private ["PSs9Equatable", "dataTaskWithURL"]
+- !private ["PSs9Equatable", "dataTaskWithRequest"]
 - !private ["PSs9Equatable", "defaultSessionConfiguration"]
 - ["PSs9Equatable", "delegate"]
 - !private ["PSs9Equatable", "desiredAccuracy"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - !private ["PSs9Equatable", "event"]
 - ["PSs9Equatable", "eventArray"]
-- !private ["PSs9Equatable", "getEventArray"]
 - ["PSs9Equatable", "httpGet"]
 - !private ["PSs9Equatable", "image"]
 - ["PSs9Equatable", "init"]
@@ -548,6 +533,7 @@ depends-member:
 - ["PSs9Equatable", "locationManagerDidPauseLocationUpdates"]
 - ["PSs9Equatable", "locationManagerDidResumeLocationUpdates"]
 - ["PSs9Equatable", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSs9Equatable", "mainQueue"]
 - ["PSs9Equatable", "mapView"]
 - ["PSs9Equatable", "mapViewDidFailLoadingMap"]
 - ["PSs9Equatable", "mapViewDidFinishLoadingMap"]
@@ -563,13 +549,11 @@ depends-member:
 - !private ["PSs9Equatable", "pushViewController"]
 - !private ["PSs9Equatable", "redColor"]
 - ["PSs9Equatable", "request"]
-- ["PSs9Equatable", "requestChCh"]
 - !private ["PSs9Equatable", "requestWhenInUseAuthorization"]
 - !private ["PSs9Equatable", "resume"]
 - !private ["PSs9Equatable", "rightCalloutAccessoryView"]
 - ["PSs9Equatable", "roadEvents"]
 - !private ["PSs9Equatable", "rotateEnabled"]
-- !private ["PSs9Equatable", "runMode"]
 - ["PSs9Equatable", "running"]
 - !private ["PSs9Equatable", "setRegion"]
 - ["PSs9Equatable", "sharedApplication"]
@@ -601,10 +585,8 @@ depends-member:
 - ["PSs8Hashable", "MKPolyline"]
 - !private ["PSs8Hashable", "MKPolylineRenderer"]
 - !private ["PSs8Hashable", "NSASCIIStringEncoding"]
-- !private ["PSs8Hashable", "NSData"]
-- !private ["PSs8Hashable", "NSDate"]
-- !private ["PSs8Hashable", "NSDefaultRunLoopMode"]
-- !private ["PSs8Hashable", "NSRunLoop"]
+- !private ["PSs8Hashable", "NSMutableURLRequest"]
+- !private ["PSs8Hashable", "NSOperationQueue"]
 - !private ["PSs8Hashable", "NSString"]
 - ["PSs8Hashable", "NSURL"]
 - !private ["PSs8Hashable", "NSURLSession"]
@@ -613,7 +595,8 @@ depends-member:
 - !private ["PSs8Hashable", "UIButton"]
 - !private ["PSs8Hashable", "UIColor"]
 - !private ["PSs8Hashable", "UIImage"]
-- !private ["PSs8Hashable", "XMLParser"]
+- ["PSs8Hashable", "URLSession"]
+- ["PSs8Hashable", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
 - !private ["PSs8Hashable", "addAnnotations"]
 - !private ["PSs8Hashable", "addOverlay"]
@@ -625,15 +608,13 @@ depends-member:
 - !private ["PSs8Hashable", "canShowCallout"]
 - ["PSs8Hashable", "chchParser"]
 - !private ["PSs8Hashable", "coordinate"]
-- !private ["PSs8Hashable", "currentRunLoop"]
-- !private ["PSs8Hashable", "dataTaskWithURL"]
+- !private ["PSs8Hashable", "dataTaskWithRequest"]
 - !private ["PSs8Hashable", "defaultSessionConfiguration"]
 - ["PSs8Hashable", "delegate"]
 - !private ["PSs8Hashable", "desiredAccuracy"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - !private ["PSs8Hashable", "event"]
 - ["PSs8Hashable", "eventArray"]
-- !private ["PSs8Hashable", "getEventArray"]
 - ["PSs8Hashable", "httpGet"]
 - !private ["PSs8Hashable", "image"]
 - ["PSs8Hashable", "init"]
@@ -646,6 +627,7 @@ depends-member:
 - ["PSs8Hashable", "locationManagerDidPauseLocationUpdates"]
 - ["PSs8Hashable", "locationManagerDidResumeLocationUpdates"]
 - ["PSs8Hashable", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSs8Hashable", "mainQueue"]
 - ["PSs8Hashable", "mapView"]
 - ["PSs8Hashable", "mapViewDidFailLoadingMap"]
 - ["PSs8Hashable", "mapViewDidFinishLoadingMap"]
@@ -661,13 +643,11 @@ depends-member:
 - !private ["PSs8Hashable", "pushViewController"]
 - !private ["PSs8Hashable", "redColor"]
 - ["PSs8Hashable", "request"]
-- ["PSs8Hashable", "requestChCh"]
 - !private ["PSs8Hashable", "requestWhenInUseAuthorization"]
 - !private ["PSs8Hashable", "resume"]
 - !private ["PSs8Hashable", "rightCalloutAccessoryView"]
 - ["PSs8Hashable", "roadEvents"]
 - !private ["PSs8Hashable", "rotateEnabled"]
-- !private ["PSs8Hashable", "runMode"]
 - ["PSs8Hashable", "running"]
 - !private ["PSs8Hashable", "setRegion"]
 - ["PSs8Hashable", "sharedApplication"]
@@ -729,10 +709,8 @@ depends-member:
 - ["PSo17MKMapViewDelegate", "MKPolyline"]
 - !private ["PSo17MKMapViewDelegate", "MKPolylineRenderer"]
 - !private ["PSo17MKMapViewDelegate", "NSASCIIStringEncoding"]
-- !private ["PSo17MKMapViewDelegate", "NSData"]
-- !private ["PSo17MKMapViewDelegate", "NSDate"]
-- !private ["PSo17MKMapViewDelegate", "NSDefaultRunLoopMode"]
-- !private ["PSo17MKMapViewDelegate", "NSRunLoop"]
+- !private ["PSo17MKMapViewDelegate", "NSMutableURLRequest"]
+- !private ["PSo17MKMapViewDelegate", "NSOperationQueue"]
 - !private ["PSo17MKMapViewDelegate", "NSString"]
 - ["PSo17MKMapViewDelegate", "NSURL"]
 - !private ["PSo17MKMapViewDelegate", "NSURLSession"]
@@ -741,7 +719,8 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "UIButton"]
 - !private ["PSo17MKMapViewDelegate", "UIColor"]
 - !private ["PSo17MKMapViewDelegate", "UIImage"]
-- !private ["PSo17MKMapViewDelegate", "XMLParser"]
+- ["PSo17MKMapViewDelegate", "URLSession"]
+- ["PSo17MKMapViewDelegate", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSo17MKMapViewDelegate", "annotationImage"]
 - !private ["PSo17MKMapViewDelegate", "annotations"]
 - !private ["PSo17MKMapViewDelegate", "eventArray"]
@@ -765,7 +744,6 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "request"]
 - !private ["PSo17MKMapViewDelegate", "running"]
 - !private ["PSo17MKMapViewDelegate", "storyboard"]
-- !private ["PSo17MKMapViewDelegate", "xmlParser"]
 - ["PSo17MKMapViewDelegate", ""]
 - !private ["CSo12MKMultiPoint", "init"]
 - !private ["PSo9MKOverlay", "init"]
@@ -800,13 +778,14 @@ depends-member:
 - ["C8RoadInfo13MapController", "MKPolyline"]
 - !private ["C8RoadInfo13MapController", "MKPolylineRenderer"]
 - !private ["C8RoadInfo13MapController", "NSASCIIStringEncoding"]
-- ["C8RoadInfo13MapController", "NSData"]
-- !private ["C8RoadInfo13MapController", "NSDate"]
-- !private ["C8RoadInfo13MapController", "NSDefaultRunLoopMode"]
-- !private ["C8RoadInfo13MapController", "NSRunLoop"]
+- !private ["C8RoadInfo13MapController", "NSData"]
+- !private ["C8RoadInfo13MapController", "NSError"]
+- ["C8RoadInfo13MapController", "NSMutableURLRequest"]
+- !private ["C8RoadInfo13MapController", "NSOperationQueue"]
 - !private ["C8RoadInfo13MapController", "NSString"]
 - ["C8RoadInfo13MapController", "NSURL"]
-- !private ["C8RoadInfo13MapController", "NSURLSession"]
+- !private ["C8RoadInfo13MapController", "NSURLResponse"]
+- ["C8RoadInfo13MapController", "NSURLSession"]
 - !private ["C8RoadInfo13MapController", "NSURLSessionConfiguration"]
 - ["C8RoadInfo13MapController", "RoadEvent"]
 - ["C8RoadInfo13MapController", "String"]
@@ -816,6 +795,8 @@ depends-member:
 - ["C8RoadInfo13MapController", "UIControl"]
 - !private ["C8RoadInfo13MapController", "UIImage"]
 - !private ["C8RoadInfo13MapController", "UIView"]
+- ["C8RoadInfo13MapController", "URLSession"]
+- ["C8RoadInfo13MapController", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - ["C8RoadInfo13MapController", "Void"]
 - ["C8RoadInfo13MapController", "XMLParser"]
 - ["C8RoadInfo13MapController", "annotationImage"]
@@ -845,7 +826,6 @@ depends-member:
 - ["C8RoadInfo13MapController", "polylines"]
 - !private ["C8RoadInfo13MapController", "print"]
 - ["C8RoadInfo13MapController", "request"]
-- ["C8RoadInfo13MapController", "requestChCh"]
 - ["C8RoadInfo13MapController", "roadEvents"]
 - ["C8RoadInfo13MapController", "running"]
 - !private ["C8RoadInfo13MapController", "storyboard"]
@@ -890,10 +870,8 @@ depends-member:
 - ["PSo8NSCoding", "MKPolyline"]
 - !private ["PSo8NSCoding", "MKPolylineRenderer"]
 - !private ["PSo8NSCoding", "NSASCIIStringEncoding"]
-- !private ["PSo8NSCoding", "NSData"]
-- !private ["PSo8NSCoding", "NSDate"]
-- !private ["PSo8NSCoding", "NSDefaultRunLoopMode"]
-- !private ["PSo8NSCoding", "NSRunLoop"]
+- !private ["PSo8NSCoding", "NSMutableURLRequest"]
+- !private ["PSo8NSCoding", "NSOperationQueue"]
 - !private ["PSo8NSCoding", "NSString"]
 - ["PSo8NSCoding", "NSURL"]
 - !private ["PSo8NSCoding", "NSURLSession"]
@@ -902,7 +880,8 @@ depends-member:
 - !private ["PSo8NSCoding", "UIButton"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIImage"]
-- !private ["PSo8NSCoding", "XMLParser"]
+- ["PSo8NSCoding", "URLSession"]
+- ["PSo8NSCoding", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSo8NSCoding", "addAnnotations"]
 - !private ["PSo8NSCoding", "addOverlay"]
 - !private ["PSo8NSCoding", "annotation"]
@@ -942,7 +921,6 @@ depends-member:
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "redColor"]
 - ["PSo8NSCoding", "request"]
-- ["PSo8NSCoding", "requestChCh"]
 - !private ["PSo8NSCoding", "rightCalloutAccessoryView"]
 - ["PSo8NSCoding", "roadEvents"]
 - !private ["PSo8NSCoding", "rotateEnabled"]
@@ -960,8 +938,6 @@ depends-member:
 - !private ["PSo9NSCopying", "localizedDescription"]
 - !private ["PSo9NSCopying", "redColor"]
 - !private ["PSo9NSCopying", "resume"]
-- !private ["CSo6NSData", "init"]
-- !private ["CSo6NSDate", "init"]
 - !private ["CSo7NSError", "localizedDescription"]
 - ["PSo26NSExtensionRequestHandling", "Annotation"]
 - !private ["PSo26NSExtensionRequestHandling", "CGPoint"]
@@ -973,10 +949,8 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "MKPolyline"]
 - !private ["PSo26NSExtensionRequestHandling", "MKPolylineRenderer"]
 - !private ["PSo26NSExtensionRequestHandling", "NSASCIIStringEncoding"]
-- !private ["PSo26NSExtensionRequestHandling", "NSData"]
-- !private ["PSo26NSExtensionRequestHandling", "NSDate"]
-- !private ["PSo26NSExtensionRequestHandling", "NSDefaultRunLoopMode"]
-- !private ["PSo26NSExtensionRequestHandling", "NSRunLoop"]
+- !private ["PSo26NSExtensionRequestHandling", "NSMutableURLRequest"]
+- !private ["PSo26NSExtensionRequestHandling", "NSOperationQueue"]
 - !private ["PSo26NSExtensionRequestHandling", "NSString"]
 - ["PSo26NSExtensionRequestHandling", "NSURL"]
 - !private ["PSo26NSExtensionRequestHandling", "NSURLSession"]
@@ -985,7 +959,8 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIButton"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIImage"]
-- !private ["PSo26NSExtensionRequestHandling", "XMLParser"]
+- ["PSo26NSExtensionRequestHandling", "URLSession"]
+- ["PSo26NSExtensionRequestHandling", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - ["PSo26NSExtensionRequestHandling", "annotationImage"]
 - ["PSo26NSExtensionRequestHandling", "annotations"]
 - ["PSo26NSExtensionRequestHandling", "appDelegate"]
@@ -1014,7 +989,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - ["PSo26NSExtensionRequestHandling", "request"]
-- ["PSo26NSExtensionRequestHandling", "requestChCh"]
 - ["PSo26NSExtensionRequestHandling", "roadEvents"]
 - ["PSo26NSExtensionRequestHandling", "running"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
@@ -1022,6 +996,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "xmlParser"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo19NSMutableURLRequest", "init"]
 - ["CSo8NSObject", "Annotation"]
 - ["CSo8NSObject", "AppDelegate"]
 - !private ["CSo8NSObject", "CGPoint"]
@@ -1043,13 +1018,14 @@ depends-member:
 - ["CSo8NSObject", "MKPolyline"]
 - !private ["CSo8NSObject", "MKPolylineRenderer"]
 - !private ["CSo8NSObject", "NSASCIIStringEncoding"]
-- ["CSo8NSObject", "NSData"]
-- !private ["CSo8NSObject", "NSDate"]
-- !private ["CSo8NSObject", "NSDefaultRunLoopMode"]
-- !private ["CSo8NSObject", "NSRunLoop"]
+- !private ["CSo8NSObject", "NSData"]
+- !private ["CSo8NSObject", "NSError"]
+- ["CSo8NSObject", "NSMutableURLRequest"]
+- !private ["CSo8NSObject", "NSOperationQueue"]
 - !private ["CSo8NSObject", "NSString"]
 - ["CSo8NSObject", "NSURL"]
-- !private ["CSo8NSObject", "NSURLSession"]
+- !private ["CSo8NSObject", "NSURLResponse"]
+- ["CSo8NSObject", "NSURLSession"]
 - !private ["CSo8NSObject", "NSURLSessionConfiguration"]
 - ["CSo8NSObject", "RoadEvent"]
 - ["CSo8NSObject", "String"]
@@ -1059,6 +1035,8 @@ depends-member:
 - ["CSo8NSObject", "UIControl"]
 - !private ["CSo8NSObject", "UIImage"]
 - !private ["CSo8NSObject", "UIView"]
+- ["CSo8NSObject", "URLSession"]
+- ["CSo8NSObject", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - ["CSo8NSObject", "Void"]
 - ["CSo8NSObject", "XMLParser"]
 - !private ["CSo8NSObject", "addAnnotations"]
@@ -1071,8 +1049,7 @@ depends-member:
 - !private ["CSo8NSObject", "canShowCallout"]
 - ["CSo8NSObject", "chchParser"]
 - !private ["CSo8NSObject", "coordinate"]
-- !private ["CSo8NSObject", "currentRunLoop"]
-- !private ["CSo8NSObject", "dataTaskWithURL"]
+- !private ["CSo8NSObject", "dataTaskWithRequest"]
 - !private ["CSo8NSObject", "defaultSessionConfiguration"]
 - !private ["CSo8NSObject", "deinit"]
 - ["CSo8NSObject", "delegate"]
@@ -1080,7 +1057,6 @@ depends-member:
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "event"]
 - ["CSo8NSObject", "eventArray"]
-- !private ["CSo8NSObject", "getEventArray"]
 - ["CSo8NSObject", "httpGet"]
 - !private ["CSo8NSObject", "image"]
 - ["CSo8NSObject", "init"]
@@ -1093,6 +1069,7 @@ depends-member:
 - ["CSo8NSObject", "locationManagerDidPauseLocationUpdates"]
 - ["CSo8NSObject", "locationManagerDidResumeLocationUpdates"]
 - ["CSo8NSObject", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["CSo8NSObject", "mainQueue"]
 - ["CSo8NSObject", "mapView"]
 - ["CSo8NSObject", "mapViewDidFailLoadingMap"]
 - ["CSo8NSObject", "mapViewDidFinishLoadingMap"]
@@ -1108,13 +1085,11 @@ depends-member:
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "redColor"]
 - ["CSo8NSObject", "request"]
-- ["CSo8NSObject", "requestChCh"]
 - !private ["CSo8NSObject", "requestWhenInUseAuthorization"]
 - !private ["CSo8NSObject", "resume"]
 - !private ["CSo8NSObject", "rightCalloutAccessoryView"]
 - ["CSo8NSObject", "roadEvents"]
 - !private ["CSo8NSObject", "rotateEnabled"]
-- !private ["CSo8NSObject", "runMode"]
 - ["CSo8NSObject", "running"]
 - !private ["CSo8NSObject", "setRegion"]
 - ["CSo8NSObject", "sharedApplication"]
@@ -1136,10 +1111,8 @@ depends-member:
 - ["PSo16NSObjectProtocol", "MKPolyline"]
 - !private ["PSo16NSObjectProtocol", "MKPolylineRenderer"]
 - !private ["PSo16NSObjectProtocol", "NSASCIIStringEncoding"]
-- !private ["PSo16NSObjectProtocol", "NSData"]
-- !private ["PSo16NSObjectProtocol", "NSDate"]
-- !private ["PSo16NSObjectProtocol", "NSDefaultRunLoopMode"]
-- !private ["PSo16NSObjectProtocol", "NSRunLoop"]
+- !private ["PSo16NSObjectProtocol", "NSMutableURLRequest"]
+- !private ["PSo16NSObjectProtocol", "NSOperationQueue"]
 - !private ["PSo16NSObjectProtocol", "NSString"]
 - ["PSo16NSObjectProtocol", "NSURL"]
 - !private ["PSo16NSObjectProtocol", "NSURLSession"]
@@ -1148,7 +1121,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIButton"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIImage"]
-- !private ["PSo16NSObjectProtocol", "XMLParser"]
+- ["PSo16NSObjectProtocol", "URLSession"]
+- ["PSo16NSObjectProtocol", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSo16NSObjectProtocol", "addAnnotations"]
 - !private ["PSo16NSObjectProtocol", "addOverlay"]
 - !private ["PSo16NSObjectProtocol", "annotation"]
@@ -1159,15 +1133,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "canShowCallout"]
 - ["PSo16NSObjectProtocol", "chchParser"]
 - !private ["PSo16NSObjectProtocol", "coordinate"]
-- !private ["PSo16NSObjectProtocol", "currentRunLoop"]
-- !private ["PSo16NSObjectProtocol", "dataTaskWithURL"]
+- !private ["PSo16NSObjectProtocol", "dataTaskWithRequest"]
 - !private ["PSo16NSObjectProtocol", "defaultSessionConfiguration"]
 - ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "desiredAccuracy"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "event"]
 - ["PSo16NSObjectProtocol", "eventArray"]
-- !private ["PSo16NSObjectProtocol", "getEventArray"]
 - ["PSo16NSObjectProtocol", "httpGet"]
 - !private ["PSo16NSObjectProtocol", "image"]
 - ["PSo16NSObjectProtocol", "init"]
@@ -1180,6 +1152,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "locationManagerDidPauseLocationUpdates"]
 - ["PSo16NSObjectProtocol", "locationManagerDidResumeLocationUpdates"]
 - ["PSo16NSObjectProtocol", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo16NSObjectProtocol", "mainQueue"]
 - ["PSo16NSObjectProtocol", "mapView"]
 - ["PSo16NSObjectProtocol", "mapViewDidFailLoadingMap"]
 - ["PSo16NSObjectProtocol", "mapViewDidFinishLoadingMap"]
@@ -1195,13 +1168,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "redColor"]
 - ["PSo16NSObjectProtocol", "request"]
-- ["PSo16NSObjectProtocol", "requestChCh"]
 - !private ["PSo16NSObjectProtocol", "requestWhenInUseAuthorization"]
 - !private ["PSo16NSObjectProtocol", "resume"]
 - !private ["PSo16NSObjectProtocol", "rightCalloutAccessoryView"]
 - ["PSo16NSObjectProtocol", "roadEvents"]
 - !private ["PSo16NSObjectProtocol", "rotateEnabled"]
-- !private ["PSo16NSObjectProtocol", "runMode"]
 - ["PSo16NSObjectProtocol", "running"]
 - !private ["PSo16NSObjectProtocol", "setRegion"]
 - ["PSo16NSObjectProtocol", "sharedApplication"]
@@ -1213,8 +1184,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "xmlParser"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["CSo9NSRunLoop", "currentRunLoop"]
-- !private ["CSo9NSRunLoop", "runMode"]
+- !private ["CSo16NSOperationQueue", "mainQueue"]
 - !private ["PSo14NSSecureCoding", "coordinate"]
 - ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "localizedDescription"]
@@ -1222,14 +1192,59 @@ depends-member:
 - !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
 - ["CSo5NSURL", "init"]
-- !private ["CSo12NSURLSession", "dataTaskWithURL"]
+- !private ["CSo12NSURLRequest", "init"]
+- !private ["CSo12NSURLSession", "dataTaskWithRequest"]
 - !private ["CSo12NSURLSession", "init"]
 - !private ["CSo25NSURLSessionConfiguration", "HTTPAdditionalHeaders"]
 - !private ["CSo25NSURLSessionConfiguration", "defaultSessionConfiguration"]
 - !private ["CSo20NSURLSessionDataTask", "resume"]
+- ["PSo20NSURLSessionDelegate", "Annotation"]
+- !private ["PSo20NSURLSessionDelegate", "CGPoint"]
+- !private ["PSo20NSURLSessionDelegate", "CLLocationCoordinate2D"]
+- ["PSo20NSURLSessionDelegate", "CLLocationManager"]
+- !private ["PSo20NSURLSessionDelegate", "MKAnnotationView"]
+- !private ["PSo20NSURLSessionDelegate", "MKCoordinateRegion"]
+- !private ["PSo20NSURLSessionDelegate", "MKCoordinateSpan"]
+- ["PSo20NSURLSessionDelegate", "MKPolyline"]
+- !private ["PSo20NSURLSessionDelegate", "MKPolylineRenderer"]
+- !private ["PSo20NSURLSessionDelegate", "NSASCIIStringEncoding"]
+- !private ["PSo20NSURLSessionDelegate", "NSMutableURLRequest"]
+- !private ["PSo20NSURLSessionDelegate", "NSOperationQueue"]
+- !private ["PSo20NSURLSessionDelegate", "NSString"]
+- ["PSo20NSURLSessionDelegate", "NSURL"]
+- !private ["PSo20NSURLSessionDelegate", "NSURLSession"]
+- !private ["PSo20NSURLSessionDelegate", "NSURLSessionConfiguration"]
+- ["PSo20NSURLSessionDelegate", "UIApplication"]
+- !private ["PSo20NSURLSessionDelegate", "UIButton"]
+- !private ["PSo20NSURLSessionDelegate", "UIColor"]
+- !private ["PSo20NSURLSessionDelegate", "UIImage"]
+- ["PSo20NSURLSessionDelegate", "URLSession"]
+- ["PSo20NSURLSessionDelegate", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["PSo20NSURLSessionDelegate", "annotationImage"]
+- !private ["PSo20NSURLSessionDelegate", "annotations"]
+- !private ["PSo20NSURLSessionDelegate", "eventArray"]
+- !private ["PSo20NSURLSessionDelegate", "httpGet"]
+- !private ["PSo20NSURLSessionDelegate", "kCLLocationAccuracyBest"]
+- !private ["PSo20NSURLSessionDelegate", "loadData"]
+- ["PSo20NSURLSessionDelegate", "locationManager"]
+- ["PSo20NSURLSessionDelegate", "locationManagerDidPauseLocationUpdates"]
+- ["PSo20NSURLSessionDelegate", "locationManagerDidResumeLocationUpdates"]
+- ["PSo20NSURLSessionDelegate", "locationManagerShouldDisplayHeadingCalibration"]
+- ["PSo20NSURLSessionDelegate", "mapView"]
+- ["PSo20NSURLSessionDelegate", "mapViewDidFailLoadingMap"]
+- ["PSo20NSURLSessionDelegate", "mapViewDidFinishLoadingMap"]
+- ["PSo20NSURLSessionDelegate", "mapViewDidFinishRenderingMap"]
+- ["PSo20NSURLSessionDelegate", "mapViewDidStopLocatingUser"]
+- ["PSo20NSURLSessionDelegate", "mapViewWillStartLoadingMap"]
+- ["PSo20NSURLSessionDelegate", "mapViewWillStartLocatingUser"]
+- ["PSo20NSURLSessionDelegate", "mapViewWillStartRenderingMap"]
+- !private ["PSo20NSURLSessionDelegate", "navigationController"]
+- !private ["PSo20NSURLSessionDelegate", "print"]
+- !private ["PSo20NSURLSessionDelegate", "request"]
+- !private ["PSo20NSURLSessionDelegate", "running"]
+- !private ["PSo20NSURLSessionDelegate", "storyboard"]
+- ["PSo20NSURLSessionDelegate", ""]
 - !private ["CSo16NSURLSessionTask", "resume"]
-- !private ["PSo19NSXMLParserDelegate", "getEventArray"]
-- !private ["PSo19NSXMLParserDelegate", "init"]
 - !private ["PSs21NilLiteralConvertible", "Generator"]
 - ["PSs21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
@@ -1312,10 +1327,8 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "MKPolyline"]
 - !private ["PSo21UIAppearanceContainer", "MKPolylineRenderer"]
 - !private ["PSo21UIAppearanceContainer", "NSASCIIStringEncoding"]
-- !private ["PSo21UIAppearanceContainer", "NSData"]
-- !private ["PSo21UIAppearanceContainer", "NSDate"]
-- !private ["PSo21UIAppearanceContainer", "NSDefaultRunLoopMode"]
-- !private ["PSo21UIAppearanceContainer", "NSRunLoop"]
+- !private ["PSo21UIAppearanceContainer", "NSMutableURLRequest"]
+- !private ["PSo21UIAppearanceContainer", "NSOperationQueue"]
 - !private ["PSo21UIAppearanceContainer", "NSString"]
 - ["PSo21UIAppearanceContainer", "NSURL"]
 - !private ["PSo21UIAppearanceContainer", "NSURLSession"]
@@ -1324,7 +1337,8 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UIButton"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIImage"]
-- !private ["PSo21UIAppearanceContainer", "XMLParser"]
+- ["PSo21UIAppearanceContainer", "URLSession"]
+- ["PSo21UIAppearanceContainer", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSo21UIAppearanceContainer", "addAnnotations"]
 - !private ["PSo21UIAppearanceContainer", "addOverlay"]
 - !private ["PSo21UIAppearanceContainer", "annotation"]
@@ -1361,7 +1375,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - ["PSo21UIAppearanceContainer", "request"]
-- ["PSo21UIAppearanceContainer", "requestChCh"]
 - !private ["PSo21UIAppearanceContainer", "rightCalloutAccessoryView"]
 - ["PSo21UIAppearanceContainer", "roadEvents"]
 - !private ["PSo21UIAppearanceContainer", "rotateEnabled"]
@@ -1388,10 +1401,8 @@ depends-member:
 - ["PSo18UIContentContainer", "MKPolyline"]
 - !private ["PSo18UIContentContainer", "MKPolylineRenderer"]
 - !private ["PSo18UIContentContainer", "NSASCIIStringEncoding"]
-- !private ["PSo18UIContentContainer", "NSData"]
-- !private ["PSo18UIContentContainer", "NSDate"]
-- !private ["PSo18UIContentContainer", "NSDefaultRunLoopMode"]
-- !private ["PSo18UIContentContainer", "NSRunLoop"]
+- !private ["PSo18UIContentContainer", "NSMutableURLRequest"]
+- !private ["PSo18UIContentContainer", "NSOperationQueue"]
 - !private ["PSo18UIContentContainer", "NSString"]
 - ["PSo18UIContentContainer", "NSURL"]
 - !private ["PSo18UIContentContainer", "NSURLSession"]
@@ -1400,7 +1411,8 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIButton"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIImage"]
-- !private ["PSo18UIContentContainer", "XMLParser"]
+- ["PSo18UIContentContainer", "URLSession"]
+- ["PSo18UIContentContainer", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - ["PSo18UIContentContainer", "annotationImage"]
 - ["PSo18UIContentContainer", "annotations"]
 - ["PSo18UIContentContainer", "appDelegate"]
@@ -1429,7 +1441,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - ["PSo18UIContentContainer", "request"]
-- ["PSo18UIContentContainer", "requestChCh"]
 - ["PSo18UIContentContainer", "roadEvents"]
 - ["PSo18UIContentContainer", "running"]
 - !private ["PSo18UIContentContainer", "storyboard"]
@@ -1474,10 +1485,8 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "MKPolyline"]
 - !private ["PSo18UIFocusEnvironment", "MKPolylineRenderer"]
 - !private ["PSo18UIFocusEnvironment", "NSASCIIStringEncoding"]
-- !private ["PSo18UIFocusEnvironment", "NSData"]
-- !private ["PSo18UIFocusEnvironment", "NSDate"]
-- !private ["PSo18UIFocusEnvironment", "NSDefaultRunLoopMode"]
-- !private ["PSo18UIFocusEnvironment", "NSRunLoop"]
+- !private ["PSo18UIFocusEnvironment", "NSMutableURLRequest"]
+- !private ["PSo18UIFocusEnvironment", "NSOperationQueue"]
 - !private ["PSo18UIFocusEnvironment", "NSString"]
 - ["PSo18UIFocusEnvironment", "NSURL"]
 - !private ["PSo18UIFocusEnvironment", "NSURLSession"]
@@ -1486,7 +1495,8 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIButton"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIImage"]
-- !private ["PSo18UIFocusEnvironment", "XMLParser"]
+- ["PSo18UIFocusEnvironment", "URLSession"]
+- ["PSo18UIFocusEnvironment", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSo18UIFocusEnvironment", "addAnnotations"]
 - !private ["PSo18UIFocusEnvironment", "addOverlay"]
 - !private ["PSo18UIFocusEnvironment", "annotation"]
@@ -1523,7 +1533,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - ["PSo18UIFocusEnvironment", "request"]
-- ["PSo18UIFocusEnvironment", "requestChCh"]
 - !private ["PSo18UIFocusEnvironment", "rightCalloutAccessoryView"]
 - ["PSo18UIFocusEnvironment", "roadEvents"]
 - !private ["PSo18UIFocusEnvironment", "rotateEnabled"]
@@ -1556,13 +1565,14 @@ depends-member:
 - ["CSo11UIResponder", "MKPolyline"]
 - !private ["CSo11UIResponder", "MKPolylineRenderer"]
 - !private ["CSo11UIResponder", "NSASCIIStringEncoding"]
-- ["CSo11UIResponder", "NSData"]
-- !private ["CSo11UIResponder", "NSDate"]
-- !private ["CSo11UIResponder", "NSDefaultRunLoopMode"]
-- !private ["CSo11UIResponder", "NSRunLoop"]
+- !private ["CSo11UIResponder", "NSData"]
+- !private ["CSo11UIResponder", "NSError"]
+- ["CSo11UIResponder", "NSMutableURLRequest"]
+- !private ["CSo11UIResponder", "NSOperationQueue"]
 - !private ["CSo11UIResponder", "NSString"]
 - ["CSo11UIResponder", "NSURL"]
-- !private ["CSo11UIResponder", "NSURLSession"]
+- !private ["CSo11UIResponder", "NSURLResponse"]
+- ["CSo11UIResponder", "NSURLSession"]
 - !private ["CSo11UIResponder", "NSURLSessionConfiguration"]
 - ["CSo11UIResponder", "RoadEvent"]
 - ["CSo11UIResponder", "String"]
@@ -1572,6 +1582,8 @@ depends-member:
 - ["CSo11UIResponder", "UIControl"]
 - !private ["CSo11UIResponder", "UIImage"]
 - !private ["CSo11UIResponder", "UIView"]
+- ["CSo11UIResponder", "URLSession"]
+- ["CSo11UIResponder", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - ["CSo11UIResponder", "Void"]
 - ["CSo11UIResponder", "XMLParser"]
 - !private ["CSo11UIResponder", "addAnnotations"]
@@ -1611,7 +1623,6 @@ depends-member:
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - ["CSo11UIResponder", "request"]
-- ["CSo11UIResponder", "requestChCh"]
 - !private ["CSo11UIResponder", "rightCalloutAccessoryView"]
 - ["CSo11UIResponder", "roadEvents"]
 - !private ["CSo11UIResponder", "rotateEnabled"]
@@ -1633,10 +1644,8 @@ depends-member:
 - ["PSo16UIStateRestoring", "MKPolyline"]
 - !private ["PSo16UIStateRestoring", "MKPolylineRenderer"]
 - !private ["PSo16UIStateRestoring", "NSASCIIStringEncoding"]
-- !private ["PSo16UIStateRestoring", "NSData"]
-- !private ["PSo16UIStateRestoring", "NSDate"]
-- !private ["PSo16UIStateRestoring", "NSDefaultRunLoopMode"]
-- !private ["PSo16UIStateRestoring", "NSRunLoop"]
+- !private ["PSo16UIStateRestoring", "NSMutableURLRequest"]
+- !private ["PSo16UIStateRestoring", "NSOperationQueue"]
 - !private ["PSo16UIStateRestoring", "NSString"]
 - ["PSo16UIStateRestoring", "NSURL"]
 - !private ["PSo16UIStateRestoring", "NSURLSession"]
@@ -1645,7 +1654,8 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIButton"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIImage"]
-- !private ["PSo16UIStateRestoring", "XMLParser"]
+- ["PSo16UIStateRestoring", "URLSession"]
+- ["PSo16UIStateRestoring", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - ["PSo16UIStateRestoring", "annotationImage"]
 - ["PSo16UIStateRestoring", "annotations"]
 - ["PSo16UIStateRestoring", "appDelegate"]
@@ -1674,7 +1684,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - ["PSo16UIStateRestoring", "request"]
-- ["PSo16UIStateRestoring", "requestChCh"]
 - ["PSo16UIStateRestoring", "roadEvents"]
 - ["PSo16UIStateRestoring", "running"]
 - !private ["PSo16UIStateRestoring", "storyboard"]
@@ -1695,10 +1704,8 @@ depends-member:
 - ["PSo18UITraitEnvironment", "MKPolyline"]
 - !private ["PSo18UITraitEnvironment", "MKPolylineRenderer"]
 - !private ["PSo18UITraitEnvironment", "NSASCIIStringEncoding"]
-- !private ["PSo18UITraitEnvironment", "NSData"]
-- !private ["PSo18UITraitEnvironment", "NSDate"]
-- !private ["PSo18UITraitEnvironment", "NSDefaultRunLoopMode"]
-- !private ["PSo18UITraitEnvironment", "NSRunLoop"]
+- !private ["PSo18UITraitEnvironment", "NSMutableURLRequest"]
+- !private ["PSo18UITraitEnvironment", "NSOperationQueue"]
 - !private ["PSo18UITraitEnvironment", "NSString"]
 - ["PSo18UITraitEnvironment", "NSURL"]
 - !private ["PSo18UITraitEnvironment", "NSURLSession"]
@@ -1707,7 +1714,8 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UIButton"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIImage"]
-- !private ["PSo18UITraitEnvironment", "XMLParser"]
+- ["PSo18UITraitEnvironment", "URLSession"]
+- ["PSo18UITraitEnvironment", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - !private ["PSo18UITraitEnvironment", "addAnnotations"]
 - !private ["PSo18UITraitEnvironment", "addOverlay"]
 - !private ["PSo18UITraitEnvironment", "annotation"]
@@ -1744,7 +1752,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - ["PSo18UITraitEnvironment", "request"]
-- ["PSo18UITraitEnvironment", "requestChCh"]
 - !private ["PSo18UITraitEnvironment", "rightCalloutAccessoryView"]
 - ["PSo18UITraitEnvironment", "roadEvents"]
 - !private ["PSo18UITraitEnvironment", "rotateEnabled"]
@@ -1789,13 +1796,14 @@ depends-member:
 - ["CSo16UIViewController", "MKPolyline"]
 - !private ["CSo16UIViewController", "MKPolylineRenderer"]
 - !private ["CSo16UIViewController", "NSASCIIStringEncoding"]
-- ["CSo16UIViewController", "NSData"]
-- !private ["CSo16UIViewController", "NSDate"]
-- !private ["CSo16UIViewController", "NSDefaultRunLoopMode"]
-- !private ["CSo16UIViewController", "NSRunLoop"]
+- !private ["CSo16UIViewController", "NSData"]
+- !private ["CSo16UIViewController", "NSError"]
+- ["CSo16UIViewController", "NSMutableURLRequest"]
+- !private ["CSo16UIViewController", "NSOperationQueue"]
 - !private ["CSo16UIViewController", "NSString"]
 - ["CSo16UIViewController", "NSURL"]
-- !private ["CSo16UIViewController", "NSURLSession"]
+- !private ["CSo16UIViewController", "NSURLResponse"]
+- ["CSo16UIViewController", "NSURLSession"]
 - !private ["CSo16UIViewController", "NSURLSessionConfiguration"]
 - ["CSo16UIViewController", "RoadEvent"]
 - ["CSo16UIViewController", "String"]
@@ -1805,6 +1813,8 @@ depends-member:
 - ["CSo16UIViewController", "UIControl"]
 - !private ["CSo16UIViewController", "UIImage"]
 - !private ["CSo16UIViewController", "UIView"]
+- ["CSo16UIViewController", "URLSession"]
+- ["CSo16UIViewController", "URLSessionDidFinishEventsForBackgroundURLSession"]
 - ["CSo16UIViewController", "Void"]
 - ["CSo16UIViewController", "XMLParser"]
 - ["CSo16UIViewController", "annotationImage"]
@@ -1836,7 +1846,6 @@ depends-member:
 - !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - ["CSo16UIViewController", "request"]
-- ["CSo16UIViewController", "requestChCh"]
 - ["CSo16UIViewController", "roadEvents"]
 - ["CSo16UIViewController", "running"]
 - !private ["CSo16UIViewController", "storyboard"]
@@ -1844,8 +1853,6 @@ depends-member:
 - ["CSo16UIViewController", "xmlParser"]
 - ["CSo16UIViewController", ""]
 - !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
-- !private ["C8RoadInfo9XMLParser", "getEventArray"]
-- !private ["C8RoadInfo9XMLParser", "init"]
 - !private ["PSs10_ArrayType", "Generator"]
 - !private ["PSs10_ArrayType", "Index"]
 - !private ["PSs10_ArrayType", "SubSequence"]
@@ -1983,22 +1990,22 @@ depends-nominal:
 - "PSs16MutableSliceable"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
-- !private "CSo6NSData"
-- !private "CSo6NSDate"
 - !private "CSo7NSError"
 - "PSo26NSExtensionRequestHandling"
 - !private "PSo16NSMutableCopying"
+- !private "CSo19NSMutableURLRequest"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "CSo9NSRunLoop"
+- !private "CSo16NSOperationQueue"
 - "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - "CSo5NSURL"
+- !private "CSo12NSURLRequest"
 - !private "CSo12NSURLSession"
 - !private "CSo25NSURLSessionConfiguration"
 - !private "CSo20NSURLSessionDataTask"
+- "PSo20NSURLSessionDelegate"
 - !private "CSo16NSURLSessionTask"
-- !private "PSo19NSXMLParserDelegate"
 - "PSs21NilLiteralConvertible"
 - "Sq"
 - !private "PSs21RandomAccessIndexType"
@@ -2038,7 +2045,6 @@ depends-nominal:
 - !private "CSo6UIView"
 - "CSo16UIViewController"
 - !private "PSs31UnicodeScalarLiteralConvertible"
-- !private "C8RoadInfo9XMLParser"
 - "PSs10_ArrayType"
 - !private "PSs33_BuiltinBooleanLiteralConvertible"
 - !private "PSs33_BuiltinIntegerLiteralConvertible"
@@ -2067,4 +2073,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
-interface-hash: "9a6862c646b97cc953de8469e22c8003"
+interface-hash: "e35ce82ae2fe66aed1c050b0509b6209"
